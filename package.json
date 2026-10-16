@@ -1,0 +1,22 @@
+{
+  "name": "ai-career-coach",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Career Coach - Code-evidence portfolio analyzer against job requirements",
+  "scripts": {
+    "dev:backend": "npm run --prefix backend dev",
+    "dev:frontend": "npm run --prefix frontend dev",
+    "build:backend": "npm run --prefix backend build",
+    "build:frontend": "npm run --prefix frontend build",
+    "test": "npm run --prefix backend test",
+    "demo": "npm run --prefix backend demo",
+    "start": "npm run --prefix backend start"
+  },
+  "keywords": [
+    "career-coach",
+    "github-analyzer",
+    "skills-assessment"
+  ],
+  "author": "",
+  "license": "MIT"
+}
