@@ -16089,6 +16089,3091 @@
       "previousVersionId": "rdm_demo_1792230169012",
       "createdAt": "2026-10-17T09:46:58.327Z",
       "updatedAt": "2026-10-17T09:47:36.360Z"
+    },
+    "rdm_1792231041532_7svae": {
+      "id": "rdm_1792231041532_7svae",
+      "assessmentId": "asmt_1792230168958_vb84",
+      "jobId": "manual_1792230168886_7mnis",
+      "jobTitle": "Senior Backend Platform Engineer",
+      "jobCompany": "Cloudflare",
+      "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+      "repositoryId": 10101,
+      "repositoryFullName": "student-dev/cloud-microservice",
+      "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+      "assessmentVersion": 2,
+      "preferences": {
+        "targetRole": "Backend Engineer",
+        "targetCompany": "Cloudflare",
+        "seniority": "mid",
+        "weeklyHours": 12
+      },
+      "skillGaps": [
+        {
+          "skill": "Docker",
+          "category": "cloud_devops",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of Docker was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": true,
+          "priorityRank": 1,
+          "priorityScore": 100,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 100/100.",
+          "prerequisites": [
+            "Linux",
+            "Git"
+          ]
+        },
+        {
+          "skill": "Node.js",
+          "category": "backend",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of Node.js was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": true,
+          "priorityRank": 2,
+          "priorityScore": 100,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 100/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "Microservices",
+          "category": "apis_architecture",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of Microservices was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": true,
+          "priorityRank": 3,
+          "priorityScore": 90,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 5,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (5/15 pts) + Project coverage (10/10 pts) = Total Priority 90/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "Python",
+          "category": "languages",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Inferred technical requirement based on Senior Backend Platform Engineer role description",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of Python was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": false,
+          "priorityRank": 4,
+          "priorityScore": 85,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 25,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Inferred requirement for Senior Backend Platform Engineer (25/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 85/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "FastAPI",
+          "category": "backend",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Inferred technical requirement based on Senior Backend Platform Engineer role description",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of FastAPI was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": false,
+          "priorityRank": 5,
+          "priorityScore": 75,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 25,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 5,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Inferred requirement for Senior Backend Platform Engineer (25/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (5/15 pts) + Project coverage (10/10 pts) = Total Priority 75/100.",
+          "prerequisites": [
+            "Python",
+            "REST API"
+          ]
+        },
+        {
+          "skill": "JavaScript",
+          "category": "languages",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Inferred technical requirement based on Senior Backend Platform Engineer role description",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of JavaScript was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": false,
+          "priorityRank": 6,
+          "priorityScore": 70,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 25,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 5,
+            "feasibilityBonus": 5
+          },
+          "priorityExplanation": "Inferred requirement for Senior Backend Platform Engineer (25/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (5/15 pts) + Project coverage (5/10 pts) = Total Priority 70/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "PostgreSQL",
+          "category": "databases",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "demonstrated",
+          "evidenceCitations": [
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/db/postgres.ts",
+              "startLine": 1,
+              "endLine": 4,
+              "evidenceSnippet": "import { Pool } from 'pg';\nexport const pool = new Pool({\n  connectionString: process.env.DATABASE_URL,\n});",
+              "explanation": "PostgreSQL schema DDL, relational joins, or connection pool",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/db/postgres.ts",
+              "startLine": 6,
+              "endLine": 9,
+              "evidenceSnippet": "export async function getUserById(id: string) {\n  const result = await pool.query('SELECT * FROM users WHERE id = $1', [id]);\n  return result.rows[0];\n}",
+              "explanation": "PostgreSQL schema DDL, relational joins, or connection pool",
+              "isValidated": true
+            }
+          ],
+          "confidence": "high",
+          "assessmentReason": "Demonstrated in src/db/postgres.ts (L6-9): PostgreSQL schema DDL, relational joins, or connection pool.",
+          "limitations": "Evaluated within inspected repository scope at this commit.",
+          "isExplicitRequirement": true,
+          "priorityRank": 7,
+          "priorityScore": 65,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 0,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'demonstrated' (0/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 65/100.",
+          "prerequisites": [
+            "SQL"
+          ]
+        },
+        {
+          "skill": "REST API",
+          "category": "apis_architecture",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "demonstrated",
+          "evidenceCitations": [
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/server.ts",
+              "startLine": 4,
+              "endLine": 7,
+              "evidenceSnippet": "\napp.get('/api/health', (req, res) => {\n  res.status(200).json({ status: 'healthy', uptime: process.uptime() });\n});",
+              "explanation": "REST endpoint request handling with structured HTTP status response",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/server.ts",
+              "startLine": 5,
+              "endLine": 8,
+              "evidenceSnippet": "app.get('/api/health', (req, res) => {\n  res.status(200).json({ status: 'healthy', uptime: process.uptime() });\n});\n",
+              "explanation": "REST endpoint request handling with structured HTTP status response",
+              "isValidated": true
+            }
+          ],
+          "confidence": "high",
+          "assessmentReason": "Demonstrated in src/server.ts (L5-8): REST endpoint request handling with structured HTTP status response.",
+          "limitations": "Evaluated within inspected repository scope at this commit.",
+          "isExplicitRequirement": true,
+          "priorityRank": 8,
+          "priorityScore": 65,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 0,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'demonstrated' (0/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 65/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "TypeScript",
+          "category": "languages",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "demonstrated",
+          "evidenceCitations": [
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/types/user.ts",
+              "startLine": 1,
+              "endLine": 3,
+              "evidenceSnippet": "export interface UserProfile {\n  id: string;\n  email: string;",
+              "explanation": "Strong TypeScript type definitions or interfaces",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/types/user.ts",
+              "startLine": 1,
+              "endLine": 4,
+              "evidenceSnippet": "export interface UserProfile {\n  id: string;\n  email: string;\n  isActive: boolean;",
+              "explanation": "Strong TypeScript type definitions or interfaces",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/types/user.ts",
+              "startLine": 2,
+              "endLine": 5,
+              "evidenceSnippet": "  id: string;\n  email: string;\n  isActive: boolean;\n  createdAt: Date;",
+              "explanation": "Strong TypeScript type definitions or interfaces",
+              "isValidated": true
+            }
+          ],
+          "confidence": "high",
+          "assessmentReason": "Demonstrated in src/types/user.ts (L2-5): Strong TypeScript type definitions or interfaces.",
+          "limitations": "Evaluated within inspected repository scope at this commit.",
+          "isExplicitRequirement": true,
+          "priorityRank": 9,
+          "priorityScore": 65,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 0,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'demonstrated' (0/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 65/100.",
+          "prerequisites": [
+            "JavaScript"
+          ]
+        },
+        {
+          "skill": "Unit Testing",
+          "category": "testing_practices",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "demonstrated",
+          "evidenceCitations": [
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "tests/server.test.ts",
+              "startLine": 3,
+              "endLine": 6,
+              "evidenceSnippet": "\ndescribe('Healthcheck API', () => {\n  it('returns 200 OK', () => {\n    expect(app).toBeDefined();",
+              "explanation": "Automated test suite assertions with describe/it or pytest functions",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "tests/server.test.ts",
+              "startLine": 4,
+              "endLine": 7,
+              "evidenceSnippet": "describe('Healthcheck API', () => {\n  it('returns 200 OK', () => {\n    expect(app).toBeDefined();\n  });",
+              "explanation": "Automated test suite assertions with describe/it or pytest functions",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "tests/server.test.ts",
+              "startLine": 5,
+              "endLine": 8,
+              "evidenceSnippet": "  it('returns 200 OK', () => {\n    expect(app).toBeDefined();\n  });\n});",
+              "explanation": "Automated test suite assertions with describe/it or pytest functions",
+              "isValidated": true
+            }
+          ],
+          "confidence": "high",
+          "assessmentReason": "Demonstrated in tests/server.test.ts (L5-8): Automated test suite assertions with describe/it or pytest functions.",
+          "limitations": "Evaluated within inspected repository scope at this commit.",
+          "isExplicitRequirement": true,
+          "priorityRank": 10,
+          "priorityScore": 55,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 0,
+            "prerequisiteValue": 5,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'demonstrated' (0/35 pts) + Prerequisite index (5/15 pts) + Project coverage (10/10 pts) = Total Priority 55/100.",
+          "prerequisites": []
+        }
+      ],
+      "recommendedProjects": [
+        {
+          "id": "proj_ai_foundational_model_serving_api_1792231041532_0",
+          "title": "Model Serving & Inference Microservice with FastAPI",
+          "track": "ai_ml",
+          "difficulty": "foundational",
+          "sequenceOrder": 1,
+          "description": "Package a machine learning model into a production-ready asynchronous Python REST API using FastAPI, Pydantic data validation, and automated batching.",
+          "estimatedEffort": "12-16 hours (2 weeks)",
+          "prerequisites": [
+            "Basic Python programming and NumPy / Pandas familiarity"
+          ],
+          "skillsCovered": [
+            "Python",
+            "FastAPI",
+            "Machine Learning",
+            "Docker",
+            "REST API"
+          ],
+          "targetSkillGaps": [
+            "Docker",
+            "Python",
+            "FastAPI",
+            "REST API"
+          ],
+          "roleFitExplanation": "Core capability for AI/ML Engineers: demonstrates taking trained models out of notebooks and deploying them as robust, production-grade microservices.",
+          "milestones": [
+            {
+              "id": "m1_pydantic_schemas",
+              "title": "Validated Input/Output Schemas with Pydantic",
+              "description": "Define strict type validation schemas for model inference requests and responses.",
+              "acceptanceCriteria": [
+                "Pydantic BaseModel with field constraints (ranges, string lengths, regex patterns)",
+                "Automated OpenAPI / Swagger interactive documentation generated at /docs",
+                "Explicit 422 Unprocessable Entity error payloads returned on malformed feature inputs"
+              ],
+              "expectedEvidence": "Pydantic schemas in app/schemas/inference.py and FastAPI app in app/main.py",
+              "isCompleted": false
+            },
+            {
+              "id": "m2_async_inference_pipeline",
+              "title": "Model Loading & Asynchronous Predict Endpoint",
+              "description": "Load serialized model artifacts at startup and expose high-throughput prediction endpoints.",
+              "acceptanceCriteria": [
+                "Model loaded into memory once on application lifespan startup (not on every request)",
+                "POST /predict endpoint running inference and returning structured predictions with confidence scores",
+                "Batch prediction endpoint POST /predict/batch processing arrays of items efficiently"
+              ],
+              "expectedEvidence": "Model loader in app/services/model_service.py and inference route in app/api/routes.py",
+              "isCompleted": false
+            },
+            {
+              "id": "m3_docker_packaging",
+              "title": "Docker Containerization for ML Runtime",
+              "description": "Containerize the FastAPI model service with pinned Python dependencies and health checks.",
+              "acceptanceCriteria": [
+                "Dockerfile with pinned pip versions via requirements.txt or poetry.lock",
+                "Container runs as non-root user with Uvicorn worker configuration",
+                "Automated test running pytest over sample inference requests inside container"
+              ],
+              "expectedEvidence": "Dockerfile in root and tests in tests/test_inference.py",
+              "isCompleted": false
+            }
+          ],
+          "learningResources": [
+            {
+              "title": "FastAPI Official Documentation",
+              "url": "https://fastapi.tiangolo.com/",
+              "type": "docs",
+              "description": "Complete guide to asynchronous Python web frameworks, Pydantic, and dependency injection."
+            },
+            {
+              "title": "Scikit-Learn Model Persistence Guide",
+              "url": "https://scikit-learn.org/stable/model_persistence.html",
+              "type": "docs",
+              "description": "Best practices for serializing and loading trained ML models safely."
+            }
+          ],
+          "status": "not_started"
+        },
+        {
+          "id": "proj_ai_intermediate_rag_pipeline_1792231041532_1",
+          "title": "Retrieval-Augmented Generation (RAG) & Vector Search Service",
+          "track": "ai_ml",
+          "difficulty": "intermediate",
+          "sequenceOrder": 2,
+          "description": "Build an end-to-end semantic search and Retrieval-Augmented Generation system using text embeddings, vector similarity indexing, and structured prompt engineering.",
+          "estimatedEffort": "16-20 hours (2-3 weeks)",
+          "prerequisites": [
+            "Model Serving & Inference Microservice with FastAPI"
+          ],
+          "skillsCovered": [
+            "Python",
+            "FastAPI",
+            "LLM & Generative AI",
+            "PostgreSQL",
+            "Docker"
+          ],
+          "targetSkillGaps": [
+            "Docker",
+            "Python",
+            "FastAPI",
+            "PostgreSQL"
+          ],
+          "roleFitExplanation": "Essential for modern GenAI roles: proves hands-on ability to build retrieval pipelines, integrate embeddings, and prevent hallucination with grounded context.",
+          "milestones": [
+            {
+              "id": "m1_chunking_embeddings",
+              "title": "Document Ingestion, Chunking & Embeddings",
+              "description": "Build a document processor that extracts text, splits it into overlapping semantic chunks, and generates embeddings.",
+              "acceptanceCriteria": [
+                "Recursive character or token-aware chunking pipeline with configurable chunk size and overlap",
+                "Embedding generator generating normalized dense vectors using an open model or API"
+              ],
+              "expectedEvidence": "Chunking logic in app/ingestion/chunker.py and embeddings client in app/services/embeddings.py",
+              "isCompleted": false
+            },
+            {
+              "id": "m2_vector_indexing",
+              "title": "Vector Store & Cosine Similarity Indexing",
+              "description": "Store and query dense vectors using pgvector in PostgreSQL or an in-memory vector index.",
+              "acceptanceCriteria": [
+                "Vector table with IVFFlat or HNSW cosine similarity index",
+                "Query endpoint retrieving top-k most relevant text chunks based on semantic distance threshold"
+              ],
+              "expectedEvidence": "Vector store adapter in app/db/vector_store.py with SQL similarity queries",
+              "isCompleted": false
+            },
+            {
+              "id": "m3_grounded_synthesis",
+              "title": "Grounded Answer Generation with Citations",
+              "description": "Assemble retrieved context chunks into a prompt and return answers with source document citations.",
+              "acceptanceCriteria": [
+                "Prompt template injecting retrieved context and instructing model to cite chunk sources",
+                "Structured JSON response including the synthesized answer alongside verified chunk IDs and source titles",
+                "Fall-back mechanism when semantic similarity is below minimum confidence threshold"
+              ],
+              "expectedEvidence": "Synthesis pipeline in app/services/rag_synthesizer.py and API route in app/api/rag.py",
+              "isCompleted": false
+            }
+          ],
+          "learningResources": [
+            {
+              "title": "pgvector Official Documentation",
+              "url": "https://github.com/pgvector/pgvector",
+              "type": "docs",
+              "description": "Open-source vector similarity search for PostgreSQL."
+            },
+            {
+              "title": "HuggingFace Embeddings & Sentence Transformers",
+              "url": "https://www.sbert.net/",
+              "type": "docs",
+              "description": "Comprehensive library for state-of-the-art sentence, text, and image embeddings."
+            }
+          ],
+          "status": "not_started"
+        },
+        {
+          "id": "proj_backend_advanced_container_ci_service_1792231041532_2",
+          "title": "Containerized Microservice with CI/CD Pipeline & Health Checks",
+          "track": "backend",
+          "difficulty": "advanced",
+          "sequenceOrder": 3,
+          "description": "Package a production backend service into multi-stage Docker containers and configure an automated GitHub Actions CI workflow with linting, testing, and vulnerability scanning.",
+          "estimatedEffort": "16-20 hours (2-3 weeks)",
+          "prerequisites": [
+            "Stateless Authentication & Role-Based Access Control (RBAC)"
+          ],
+          "skillsCovered": [
+            "Docker",
+            "CI/CD",
+            "Unit Testing",
+            "TypeScript",
+            "Node.js",
+            "Microservices"
+          ],
+          "targetSkillGaps": [
+            "Docker",
+            "Node.js",
+            "Microservices",
+            "TypeScript",
+            "Unit Testing"
+          ],
+          "roleFitExplanation": "High-value demonstration for production engineering: shows proficiency in DevOps practices, container hygiene, and automated continuous integration.",
+          "milestones": [
+            {
+              "id": "m1_docker_multistage",
+              "title": "Multi-Stage Dockerfile & Compose Configuration",
+              "description": "Create an optimized multi-stage Docker build separating compile time from minimal production runtime.",
+              "acceptanceCriteria": [
+                "Multi-stage Dockerfile using node:alpine or distroless base image for minimal attack surface",
+                "Non-root user (USER node) configured for execution",
+                "docker-compose.yml orchestrating the API and a PostgreSQL container with health checks"
+              ],
+              "expectedEvidence": "Dockerfile in root and docker-compose.yml with healthcheck configuration",
+              "isCompleted": false
+            },
+            {
+              "id": "m2_github_actions_ci",
+              "title": "Automated GitHub Actions CI Workflow",
+              "description": "Write a GitHub Actions pipeline triggering on pull requests and pushes to main.",
+              "acceptanceCriteria": [
+                "Pipeline runs linting, type-checking (tsc --noEmit), and automated unit tests in parallel",
+                "Runs test suite against an ephemeral PostgreSQL service container in GitHub Actions",
+                "Fails build if any test fails or linting reports errors"
+              ],
+              "expectedEvidence": "Workflow file in .github/workflows/ci.yml",
+              "isCompleted": false
+            },
+            {
+              "id": "m3_observability",
+              "title": "Graceful Shutdown & Structured Logging",
+              "description": "Implement SIGTERM/SIGINT signal trapping and structured JSON logging.",
+              "acceptanceCriteria": [
+                "SIGTERM handler stops receiving new connections and drains database pool before process exit",
+                "Structured JSON logs (Pino or Winston) including request ID, duration, and status code"
+              ],
+              "expectedEvidence": "Server lifecycle handling in src/server.ts and logger utility in src/utils/logger.ts",
+              "isCompleted": false
+            }
+          ],
+          "learningResources": [
+            {
+              "title": "Docker Documentation: Multi-stage Builds",
+              "url": "https://docs.docker.com/build/building/multi-stage/",
+              "type": "docs",
+              "description": "Official Docker guide for creating lightweight, secure production images."
+            },
+            {
+              "title": "GitHub Actions Documentation",
+              "url": "https://docs.github.com/en/actions",
+              "type": "docs",
+              "description": "Official documentation for GitHub Actions workflow syntax and service containers."
+            }
+          ],
+          "status": "not_started"
+        }
+      ],
+      "overallProgressPct": 0,
+      "version": 3,
+      "previousVersionId": "rdm_1792230418327_f273u",
+      "createdAt": "2026-10-17T09:57:21.532Z",
+      "updatedAt": "2026-10-17T09:57:21.532Z"
+    },
+    "rdm_1792231044896_zh1sf": {
+      "id": "rdm_1792231044896_zh1sf",
+      "assessmentId": "asmt_1792230168958_vb84",
+      "jobId": "manual_1792230168886_7mnis",
+      "jobTitle": "Senior Backend Platform Engineer",
+      "jobCompany": "Cloudflare",
+      "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+      "repositoryId": 10101,
+      "repositoryFullName": "student-dev/cloud-microservice",
+      "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+      "assessmentVersion": 2,
+      "preferences": {
+        "targetRole": "Backend Engineer",
+        "targetCompany": "Cloudflare",
+        "seniority": "mid",
+        "weeklyHours": 12
+      },
+      "skillGaps": [
+        {
+          "skill": "Docker",
+          "category": "cloud_devops",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of Docker was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": true,
+          "priorityRank": 1,
+          "priorityScore": 100,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 100/100.",
+          "prerequisites": [
+            "Linux",
+            "Git"
+          ]
+        },
+        {
+          "skill": "Node.js",
+          "category": "backend",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of Node.js was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": true,
+          "priorityRank": 2,
+          "priorityScore": 100,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 100/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "Microservices",
+          "category": "apis_architecture",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of Microservices was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": true,
+          "priorityRank": 3,
+          "priorityScore": 90,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 5,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (5/15 pts) + Project coverage (10/10 pts) = Total Priority 90/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "Python",
+          "category": "languages",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Inferred technical requirement based on Senior Backend Platform Engineer role description",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of Python was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": false,
+          "priorityRank": 4,
+          "priorityScore": 85,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 25,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Inferred requirement for Senior Backend Platform Engineer (25/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 85/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "FastAPI",
+          "category": "backend",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Inferred technical requirement based on Senior Backend Platform Engineer role description",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of FastAPI was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": false,
+          "priorityRank": 5,
+          "priorityScore": 75,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 25,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 5,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Inferred requirement for Senior Backend Platform Engineer (25/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (5/15 pts) + Project coverage (10/10 pts) = Total Priority 75/100.",
+          "prerequisites": [
+            "Python",
+            "REST API"
+          ]
+        },
+        {
+          "skill": "JavaScript",
+          "category": "languages",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Inferred technical requirement based on Senior Backend Platform Engineer role description",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of JavaScript was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": false,
+          "priorityRank": 6,
+          "priorityScore": 70,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 25,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 5,
+            "feasibilityBonus": 5
+          },
+          "priorityExplanation": "Inferred requirement for Senior Backend Platform Engineer (25/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (5/15 pts) + Project coverage (5/10 pts) = Total Priority 70/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "PostgreSQL",
+          "category": "databases",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "demonstrated",
+          "evidenceCitations": [
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/db/postgres.ts",
+              "startLine": 1,
+              "endLine": 4,
+              "evidenceSnippet": "import { Pool } from 'pg';\nexport const pool = new Pool({\n  connectionString: process.env.DATABASE_URL,\n});",
+              "explanation": "PostgreSQL schema DDL, relational joins, or connection pool",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/db/postgres.ts",
+              "startLine": 6,
+              "endLine": 9,
+              "evidenceSnippet": "export async function getUserById(id: string) {\n  const result = await pool.query('SELECT * FROM users WHERE id = $1', [id]);\n  return result.rows[0];\n}",
+              "explanation": "PostgreSQL schema DDL, relational joins, or connection pool",
+              "isValidated": true
+            }
+          ],
+          "confidence": "high",
+          "assessmentReason": "Demonstrated in src/db/postgres.ts (L6-9): PostgreSQL schema DDL, relational joins, or connection pool.",
+          "limitations": "Evaluated within inspected repository scope at this commit.",
+          "isExplicitRequirement": true,
+          "priorityRank": 7,
+          "priorityScore": 65,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 0,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'demonstrated' (0/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 65/100.",
+          "prerequisites": [
+            "SQL"
+          ]
+        },
+        {
+          "skill": "REST API",
+          "category": "apis_architecture",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "demonstrated",
+          "evidenceCitations": [
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/server.ts",
+              "startLine": 4,
+              "endLine": 7,
+              "evidenceSnippet": "\napp.get('/api/health', (req, res) => {\n  res.status(200).json({ status: 'healthy', uptime: process.uptime() });\n});",
+              "explanation": "REST endpoint request handling with structured HTTP status response",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/server.ts",
+              "startLine": 5,
+              "endLine": 8,
+              "evidenceSnippet": "app.get('/api/health', (req, res) => {\n  res.status(200).json({ status: 'healthy', uptime: process.uptime() });\n});\n",
+              "explanation": "REST endpoint request handling with structured HTTP status response",
+              "isValidated": true
+            }
+          ],
+          "confidence": "high",
+          "assessmentReason": "Demonstrated in src/server.ts (L5-8): REST endpoint request handling with structured HTTP status response.",
+          "limitations": "Evaluated within inspected repository scope at this commit.",
+          "isExplicitRequirement": true,
+          "priorityRank": 8,
+          "priorityScore": 65,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 0,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'demonstrated' (0/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 65/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "TypeScript",
+          "category": "languages",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "demonstrated",
+          "evidenceCitations": [
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/types/user.ts",
+              "startLine": 1,
+              "endLine": 3,
+              "evidenceSnippet": "export interface UserProfile {\n  id: string;\n  email: string;",
+              "explanation": "Strong TypeScript type definitions or interfaces",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/types/user.ts",
+              "startLine": 1,
+              "endLine": 4,
+              "evidenceSnippet": "export interface UserProfile {\n  id: string;\n  email: string;\n  isActive: boolean;",
+              "explanation": "Strong TypeScript type definitions or interfaces",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/types/user.ts",
+              "startLine": 2,
+              "endLine": 5,
+              "evidenceSnippet": "  id: string;\n  email: string;\n  isActive: boolean;\n  createdAt: Date;",
+              "explanation": "Strong TypeScript type definitions or interfaces",
+              "isValidated": true
+            }
+          ],
+          "confidence": "high",
+          "assessmentReason": "Demonstrated in src/types/user.ts (L2-5): Strong TypeScript type definitions or interfaces.",
+          "limitations": "Evaluated within inspected repository scope at this commit.",
+          "isExplicitRequirement": true,
+          "priorityRank": 9,
+          "priorityScore": 65,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 0,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'demonstrated' (0/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 65/100.",
+          "prerequisites": [
+            "JavaScript"
+          ]
+        },
+        {
+          "skill": "Unit Testing",
+          "category": "testing_practices",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "demonstrated",
+          "evidenceCitations": [
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "tests/server.test.ts",
+              "startLine": 3,
+              "endLine": 6,
+              "evidenceSnippet": "\ndescribe('Healthcheck API', () => {\n  it('returns 200 OK', () => {\n    expect(app).toBeDefined();",
+              "explanation": "Automated test suite assertions with describe/it or pytest functions",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "tests/server.test.ts",
+              "startLine": 4,
+              "endLine": 7,
+              "evidenceSnippet": "describe('Healthcheck API', () => {\n  it('returns 200 OK', () => {\n    expect(app).toBeDefined();\n  });",
+              "explanation": "Automated test suite assertions with describe/it or pytest functions",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "tests/server.test.ts",
+              "startLine": 5,
+              "endLine": 8,
+              "evidenceSnippet": "  it('returns 200 OK', () => {\n    expect(app).toBeDefined();\n  });\n});",
+              "explanation": "Automated test suite assertions with describe/it or pytest functions",
+              "isValidated": true
+            }
+          ],
+          "confidence": "high",
+          "assessmentReason": "Demonstrated in tests/server.test.ts (L5-8): Automated test suite assertions with describe/it or pytest functions.",
+          "limitations": "Evaluated within inspected repository scope at this commit.",
+          "isExplicitRequirement": true,
+          "priorityRank": 10,
+          "priorityScore": 55,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 0,
+            "prerequisiteValue": 5,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'demonstrated' (0/35 pts) + Prerequisite index (5/15 pts) + Project coverage (10/10 pts) = Total Priority 55/100.",
+          "prerequisites": []
+        }
+      ],
+      "recommendedProjects": [
+        {
+          "id": "proj_ai_foundational_model_serving_api_1792231044895_0",
+          "title": "Model Serving & Inference Microservice with FastAPI",
+          "track": "ai_ml",
+          "difficulty": "foundational",
+          "sequenceOrder": 1,
+          "description": "Package a machine learning model into a production-ready asynchronous Python REST API using FastAPI, Pydantic data validation, and automated batching.",
+          "estimatedEffort": "12-16 hours (2 weeks)",
+          "prerequisites": [
+            "Basic Python programming and NumPy / Pandas familiarity"
+          ],
+          "skillsCovered": [
+            "Python",
+            "FastAPI",
+            "Machine Learning",
+            "Docker",
+            "REST API"
+          ],
+          "targetSkillGaps": [
+            "Docker",
+            "Python",
+            "FastAPI",
+            "REST API"
+          ],
+          "roleFitExplanation": "Core capability for AI/ML Engineers: demonstrates taking trained models out of notebooks and deploying them as robust, production-grade microservices.",
+          "milestones": [
+            {
+              "id": "m1_pydantic_schemas",
+              "title": "Validated Input/Output Schemas with Pydantic",
+              "description": "Define strict type validation schemas for model inference requests and responses.",
+              "acceptanceCriteria": [
+                "Pydantic BaseModel with field constraints (ranges, string lengths, regex patterns)",
+                "Automated OpenAPI / Swagger interactive documentation generated at /docs",
+                "Explicit 422 Unprocessable Entity error payloads returned on malformed feature inputs"
+              ],
+              "expectedEvidence": "Pydantic schemas in app/schemas/inference.py and FastAPI app in app/main.py",
+              "isCompleted": false
+            },
+            {
+              "id": "m2_async_inference_pipeline",
+              "title": "Model Loading & Asynchronous Predict Endpoint",
+              "description": "Load serialized model artifacts at startup and expose high-throughput prediction endpoints.",
+              "acceptanceCriteria": [
+                "Model loaded into memory once on application lifespan startup (not on every request)",
+                "POST /predict endpoint running inference and returning structured predictions with confidence scores",
+                "Batch prediction endpoint POST /predict/batch processing arrays of items efficiently"
+              ],
+              "expectedEvidence": "Model loader in app/services/model_service.py and inference route in app/api/routes.py",
+              "isCompleted": false
+            },
+            {
+              "id": "m3_docker_packaging",
+              "title": "Docker Containerization for ML Runtime",
+              "description": "Containerize the FastAPI model service with pinned Python dependencies and health checks.",
+              "acceptanceCriteria": [
+                "Dockerfile with pinned pip versions via requirements.txt or poetry.lock",
+                "Container runs as non-root user with Uvicorn worker configuration",
+                "Automated test running pytest over sample inference requests inside container"
+              ],
+              "expectedEvidence": "Dockerfile in root and tests in tests/test_inference.py",
+              "isCompleted": false
+            }
+          ],
+          "learningResources": [
+            {
+              "title": "FastAPI Official Documentation",
+              "url": "https://fastapi.tiangolo.com/",
+              "type": "docs",
+              "description": "Complete guide to asynchronous Python web frameworks, Pydantic, and dependency injection."
+            },
+            {
+              "title": "Scikit-Learn Model Persistence Guide",
+              "url": "https://scikit-learn.org/stable/model_persistence.html",
+              "type": "docs",
+              "description": "Best practices for serializing and loading trained ML models safely."
+            }
+          ],
+          "status": "not_started"
+        },
+        {
+          "id": "proj_ai_intermediate_rag_pipeline_1792231044895_1",
+          "title": "Retrieval-Augmented Generation (RAG) & Vector Search Service",
+          "track": "ai_ml",
+          "difficulty": "intermediate",
+          "sequenceOrder": 2,
+          "description": "Build an end-to-end semantic search and Retrieval-Augmented Generation system using text embeddings, vector similarity indexing, and structured prompt engineering.",
+          "estimatedEffort": "16-20 hours (2-3 weeks)",
+          "prerequisites": [
+            "Model Serving & Inference Microservice with FastAPI"
+          ],
+          "skillsCovered": [
+            "Python",
+            "FastAPI",
+            "LLM & Generative AI",
+            "PostgreSQL",
+            "Docker"
+          ],
+          "targetSkillGaps": [
+            "Docker",
+            "Python",
+            "FastAPI",
+            "PostgreSQL"
+          ],
+          "roleFitExplanation": "Essential for modern GenAI roles: proves hands-on ability to build retrieval pipelines, integrate embeddings, and prevent hallucination with grounded context.",
+          "milestones": [
+            {
+              "id": "m1_chunking_embeddings",
+              "title": "Document Ingestion, Chunking & Embeddings",
+              "description": "Build a document processor that extracts text, splits it into overlapping semantic chunks, and generates embeddings.",
+              "acceptanceCriteria": [
+                "Recursive character or token-aware chunking pipeline with configurable chunk size and overlap",
+                "Embedding generator generating normalized dense vectors using an open model or API"
+              ],
+              "expectedEvidence": "Chunking logic in app/ingestion/chunker.py and embeddings client in app/services/embeddings.py",
+              "isCompleted": false
+            },
+            {
+              "id": "m2_vector_indexing",
+              "title": "Vector Store & Cosine Similarity Indexing",
+              "description": "Store and query dense vectors using pgvector in PostgreSQL or an in-memory vector index.",
+              "acceptanceCriteria": [
+                "Vector table with IVFFlat or HNSW cosine similarity index",
+                "Query endpoint retrieving top-k most relevant text chunks based on semantic distance threshold"
+              ],
+              "expectedEvidence": "Vector store adapter in app/db/vector_store.py with SQL similarity queries",
+              "isCompleted": false
+            },
+            {
+              "id": "m3_grounded_synthesis",
+              "title": "Grounded Answer Generation with Citations",
+              "description": "Assemble retrieved context chunks into a prompt and return answers with source document citations.",
+              "acceptanceCriteria": [
+                "Prompt template injecting retrieved context and instructing model to cite chunk sources",
+                "Structured JSON response including the synthesized answer alongside verified chunk IDs and source titles",
+                "Fall-back mechanism when semantic similarity is below minimum confidence threshold"
+              ],
+              "expectedEvidence": "Synthesis pipeline in app/services/rag_synthesizer.py and API route in app/api/rag.py",
+              "isCompleted": false
+            }
+          ],
+          "learningResources": [
+            {
+              "title": "pgvector Official Documentation",
+              "url": "https://github.com/pgvector/pgvector",
+              "type": "docs",
+              "description": "Open-source vector similarity search for PostgreSQL."
+            },
+            {
+              "title": "HuggingFace Embeddings & Sentence Transformers",
+              "url": "https://www.sbert.net/",
+              "type": "docs",
+              "description": "Comprehensive library for state-of-the-art sentence, text, and image embeddings."
+            }
+          ],
+          "status": "not_started"
+        },
+        {
+          "id": "proj_backend_advanced_container_ci_service_1792231044895_2",
+          "title": "Containerized Microservice with CI/CD Pipeline & Health Checks",
+          "track": "backend",
+          "difficulty": "advanced",
+          "sequenceOrder": 3,
+          "description": "Package a production backend service into multi-stage Docker containers and configure an automated GitHub Actions CI workflow with linting, testing, and vulnerability scanning.",
+          "estimatedEffort": "16-20 hours (2-3 weeks)",
+          "prerequisites": [
+            "Stateless Authentication & Role-Based Access Control (RBAC)"
+          ],
+          "skillsCovered": [
+            "Docker",
+            "CI/CD",
+            "Unit Testing",
+            "TypeScript",
+            "Node.js",
+            "Microservices"
+          ],
+          "targetSkillGaps": [
+            "Docker",
+            "Node.js",
+            "Microservices",
+            "TypeScript",
+            "Unit Testing"
+          ],
+          "roleFitExplanation": "High-value demonstration for production engineering: shows proficiency in DevOps practices, container hygiene, and automated continuous integration.",
+          "milestones": [
+            {
+              "id": "m1_docker_multistage",
+              "title": "Multi-Stage Dockerfile & Compose Configuration",
+              "description": "Create an optimized multi-stage Docker build separating compile time from minimal production runtime.",
+              "acceptanceCriteria": [
+                "Multi-stage Dockerfile using node:alpine or distroless base image for minimal attack surface",
+                "Non-root user (USER node) configured for execution",
+                "docker-compose.yml orchestrating the API and a PostgreSQL container with health checks"
+              ],
+              "expectedEvidence": "Dockerfile in root and docker-compose.yml with healthcheck configuration",
+              "isCompleted": false
+            },
+            {
+              "id": "m2_github_actions_ci",
+              "title": "Automated GitHub Actions CI Workflow",
+              "description": "Write a GitHub Actions pipeline triggering on pull requests and pushes to main.",
+              "acceptanceCriteria": [
+                "Pipeline runs linting, type-checking (tsc --noEmit), and automated unit tests in parallel",
+                "Runs test suite against an ephemeral PostgreSQL service container in GitHub Actions",
+                "Fails build if any test fails or linting reports errors"
+              ],
+              "expectedEvidence": "Workflow file in .github/workflows/ci.yml",
+              "isCompleted": false
+            },
+            {
+              "id": "m3_observability",
+              "title": "Graceful Shutdown & Structured Logging",
+              "description": "Implement SIGTERM/SIGINT signal trapping and structured JSON logging.",
+              "acceptanceCriteria": [
+                "SIGTERM handler stops receiving new connections and drains database pool before process exit",
+                "Structured JSON logs (Pino or Winston) including request ID, duration, and status code"
+              ],
+              "expectedEvidence": "Server lifecycle handling in src/server.ts and logger utility in src/utils/logger.ts",
+              "isCompleted": false
+            }
+          ],
+          "learningResources": [
+            {
+              "title": "Docker Documentation: Multi-stage Builds",
+              "url": "https://docs.docker.com/build/building/multi-stage/",
+              "type": "docs",
+              "description": "Official Docker guide for creating lightweight, secure production images."
+            },
+            {
+              "title": "GitHub Actions Documentation",
+              "url": "https://docs.github.com/en/actions",
+              "type": "docs",
+              "description": "Official documentation for GitHub Actions workflow syntax and service containers."
+            }
+          ],
+          "status": "not_started"
+        }
+      ],
+      "overallProgressPct": 0,
+      "version": 4,
+      "previousVersionId": "rdm_1792231041532_7svae",
+      "createdAt": "2026-10-17T09:57:24.896Z",
+      "updatedAt": "2026-10-17T09:57:24.896Z"
+    },
+    "rdm_1792231046866_6zeov": {
+      "id": "rdm_1792231046866_6zeov",
+      "assessmentId": "asmt_1792230168958_vb84",
+      "jobId": "manual_1792230168886_7mnis",
+      "jobTitle": "Senior Backend Platform Engineer",
+      "jobCompany": "Cloudflare",
+      "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+      "repositoryId": 10101,
+      "repositoryFullName": "student-dev/cloud-microservice",
+      "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+      "assessmentVersion": 2,
+      "preferences": {
+        "targetRole": "Backend Engineer",
+        "targetCompany": "Cloudflare",
+        "seniority": "mid",
+        "weeklyHours": 12
+      },
+      "skillGaps": [
+        {
+          "skill": "Docker",
+          "category": "cloud_devops",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of Docker was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": true,
+          "priorityRank": 1,
+          "priorityScore": 100,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 100/100.",
+          "prerequisites": [
+            "Linux",
+            "Git"
+          ]
+        },
+        {
+          "skill": "Node.js",
+          "category": "backend",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of Node.js was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": true,
+          "priorityRank": 2,
+          "priorityScore": 100,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 100/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "Microservices",
+          "category": "apis_architecture",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of Microservices was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": true,
+          "priorityRank": 3,
+          "priorityScore": 90,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 5,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (5/15 pts) + Project coverage (10/10 pts) = Total Priority 90/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "Python",
+          "category": "languages",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Inferred technical requirement based on Senior Backend Platform Engineer role description",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of Python was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": false,
+          "priorityRank": 4,
+          "priorityScore": 85,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 25,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Inferred requirement for Senior Backend Platform Engineer (25/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 85/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "FastAPI",
+          "category": "backend",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Inferred technical requirement based on Senior Backend Platform Engineer role description",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of FastAPI was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": false,
+          "priorityRank": 5,
+          "priorityScore": 75,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 25,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 5,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Inferred requirement for Senior Backend Platform Engineer (25/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (5/15 pts) + Project coverage (10/10 pts) = Total Priority 75/100.",
+          "prerequisites": [
+            "Python",
+            "REST API"
+          ]
+        },
+        {
+          "skill": "JavaScript",
+          "category": "languages",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Inferred technical requirement based on Senior Backend Platform Engineer role description",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of JavaScript was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": false,
+          "priorityRank": 6,
+          "priorityScore": 70,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 25,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 5,
+            "feasibilityBonus": 5
+          },
+          "priorityExplanation": "Inferred requirement for Senior Backend Platform Engineer (25/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (5/15 pts) + Project coverage (5/10 pts) = Total Priority 70/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "PostgreSQL",
+          "category": "databases",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "demonstrated",
+          "evidenceCitations": [
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/db/postgres.ts",
+              "startLine": 1,
+              "endLine": 4,
+              "evidenceSnippet": "import { Pool } from 'pg';\nexport const pool = new Pool({\n  connectionString: process.env.DATABASE_URL,\n});",
+              "explanation": "PostgreSQL schema DDL, relational joins, or connection pool",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/db/postgres.ts",
+              "startLine": 6,
+              "endLine": 9,
+              "evidenceSnippet": "export async function getUserById(id: string) {\n  const result = await pool.query('SELECT * FROM users WHERE id = $1', [id]);\n  return result.rows[0];\n}",
+              "explanation": "PostgreSQL schema DDL, relational joins, or connection pool",
+              "isValidated": true
+            }
+          ],
+          "confidence": "high",
+          "assessmentReason": "Demonstrated in src/db/postgres.ts (L6-9): PostgreSQL schema DDL, relational joins, or connection pool.",
+          "limitations": "Evaluated within inspected repository scope at this commit.",
+          "isExplicitRequirement": true,
+          "priorityRank": 7,
+          "priorityScore": 65,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 0,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'demonstrated' (0/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 65/100.",
+          "prerequisites": [
+            "SQL"
+          ]
+        },
+        {
+          "skill": "REST API",
+          "category": "apis_architecture",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "demonstrated",
+          "evidenceCitations": [
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/server.ts",
+              "startLine": 4,
+              "endLine": 7,
+              "evidenceSnippet": "\napp.get('/api/health', (req, res) => {\n  res.status(200).json({ status: 'healthy', uptime: process.uptime() });\n});",
+              "explanation": "REST endpoint request handling with structured HTTP status response",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/server.ts",
+              "startLine": 5,
+              "endLine": 8,
+              "evidenceSnippet": "app.get('/api/health', (req, res) => {\n  res.status(200).json({ status: 'healthy', uptime: process.uptime() });\n});\n",
+              "explanation": "REST endpoint request handling with structured HTTP status response",
+              "isValidated": true
+            }
+          ],
+          "confidence": "high",
+          "assessmentReason": "Demonstrated in src/server.ts (L5-8): REST endpoint request handling with structured HTTP status response.",
+          "limitations": "Evaluated within inspected repository scope at this commit.",
+          "isExplicitRequirement": true,
+          "priorityRank": 8,
+          "priorityScore": 65,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 0,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'demonstrated' (0/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 65/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "TypeScript",
+          "category": "languages",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "demonstrated",
+          "evidenceCitations": [
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/types/user.ts",
+              "startLine": 1,
+              "endLine": 3,
+              "evidenceSnippet": "export interface UserProfile {\n  id: string;\n  email: string;",
+              "explanation": "Strong TypeScript type definitions or interfaces",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/types/user.ts",
+              "startLine": 1,
+              "endLine": 4,
+              "evidenceSnippet": "export interface UserProfile {\n  id: string;\n  email: string;\n  isActive: boolean;",
+              "explanation": "Strong TypeScript type definitions or interfaces",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/types/user.ts",
+              "startLine": 2,
+              "endLine": 5,
+              "evidenceSnippet": "  id: string;\n  email: string;\n  isActive: boolean;\n  createdAt: Date;",
+              "explanation": "Strong TypeScript type definitions or interfaces",
+              "isValidated": true
+            }
+          ],
+          "confidence": "high",
+          "assessmentReason": "Demonstrated in src/types/user.ts (L2-5): Strong TypeScript type definitions or interfaces.",
+          "limitations": "Evaluated within inspected repository scope at this commit.",
+          "isExplicitRequirement": true,
+          "priorityRank": 9,
+          "priorityScore": 65,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 0,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'demonstrated' (0/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 65/100.",
+          "prerequisites": [
+            "JavaScript"
+          ]
+        },
+        {
+          "skill": "Unit Testing",
+          "category": "testing_practices",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "demonstrated",
+          "evidenceCitations": [
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "tests/server.test.ts",
+              "startLine": 3,
+              "endLine": 6,
+              "evidenceSnippet": "\ndescribe('Healthcheck API', () => {\n  it('returns 200 OK', () => {\n    expect(app).toBeDefined();",
+              "explanation": "Automated test suite assertions with describe/it or pytest functions",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "tests/server.test.ts",
+              "startLine": 4,
+              "endLine": 7,
+              "evidenceSnippet": "describe('Healthcheck API', () => {\n  it('returns 200 OK', () => {\n    expect(app).toBeDefined();\n  });",
+              "explanation": "Automated test suite assertions with describe/it or pytest functions",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "tests/server.test.ts",
+              "startLine": 5,
+              "endLine": 8,
+              "evidenceSnippet": "  it('returns 200 OK', () => {\n    expect(app).toBeDefined();\n  });\n});",
+              "explanation": "Automated test suite assertions with describe/it or pytest functions",
+              "isValidated": true
+            }
+          ],
+          "confidence": "high",
+          "assessmentReason": "Demonstrated in tests/server.test.ts (L5-8): Automated test suite assertions with describe/it or pytest functions.",
+          "limitations": "Evaluated within inspected repository scope at this commit.",
+          "isExplicitRequirement": true,
+          "priorityRank": 10,
+          "priorityScore": 55,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 0,
+            "prerequisiteValue": 5,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'demonstrated' (0/35 pts) + Prerequisite index (5/15 pts) + Project coverage (10/10 pts) = Total Priority 55/100.",
+          "prerequisites": []
+        }
+      ],
+      "recommendedProjects": [
+        {
+          "id": "proj_ai_foundational_model_serving_api_1792231046865_0",
+          "title": "Model Serving & Inference Microservice with FastAPI",
+          "track": "ai_ml",
+          "difficulty": "foundational",
+          "sequenceOrder": 1,
+          "description": "Package a machine learning model into a production-ready asynchronous Python REST API using FastAPI, Pydantic data validation, and automated batching.",
+          "estimatedEffort": "12-16 hours (2 weeks)",
+          "prerequisites": [
+            "Basic Python programming and NumPy / Pandas familiarity"
+          ],
+          "skillsCovered": [
+            "Python",
+            "FastAPI",
+            "Machine Learning",
+            "Docker",
+            "REST API"
+          ],
+          "targetSkillGaps": [
+            "Docker",
+            "Python",
+            "FastAPI",
+            "REST API"
+          ],
+          "roleFitExplanation": "Core capability for AI/ML Engineers: demonstrates taking trained models out of notebooks and deploying them as robust, production-grade microservices.",
+          "milestones": [
+            {
+              "id": "m1_pydantic_schemas",
+              "title": "Validated Input/Output Schemas with Pydantic",
+              "description": "Define strict type validation schemas for model inference requests and responses.",
+              "acceptanceCriteria": [
+                "Pydantic BaseModel with field constraints (ranges, string lengths, regex patterns)",
+                "Automated OpenAPI / Swagger interactive documentation generated at /docs",
+                "Explicit 422 Unprocessable Entity error payloads returned on malformed feature inputs"
+              ],
+              "expectedEvidence": "Pydantic schemas in app/schemas/inference.py and FastAPI app in app/main.py",
+              "isCompleted": false
+            },
+            {
+              "id": "m2_async_inference_pipeline",
+              "title": "Model Loading & Asynchronous Predict Endpoint",
+              "description": "Load serialized model artifacts at startup and expose high-throughput prediction endpoints.",
+              "acceptanceCriteria": [
+                "Model loaded into memory once on application lifespan startup (not on every request)",
+                "POST /predict endpoint running inference and returning structured predictions with confidence scores",
+                "Batch prediction endpoint POST /predict/batch processing arrays of items efficiently"
+              ],
+              "expectedEvidence": "Model loader in app/services/model_service.py and inference route in app/api/routes.py",
+              "isCompleted": false
+            },
+            {
+              "id": "m3_docker_packaging",
+              "title": "Docker Containerization for ML Runtime",
+              "description": "Containerize the FastAPI model service with pinned Python dependencies and health checks.",
+              "acceptanceCriteria": [
+                "Dockerfile with pinned pip versions via requirements.txt or poetry.lock",
+                "Container runs as non-root user with Uvicorn worker configuration",
+                "Automated test running pytest over sample inference requests inside container"
+              ],
+              "expectedEvidence": "Dockerfile in root and tests in tests/test_inference.py",
+              "isCompleted": false
+            }
+          ],
+          "learningResources": [
+            {
+              "title": "FastAPI Official Documentation",
+              "url": "https://fastapi.tiangolo.com/",
+              "type": "docs",
+              "description": "Complete guide to asynchronous Python web frameworks, Pydantic, and dependency injection."
+            },
+            {
+              "title": "Scikit-Learn Model Persistence Guide",
+              "url": "https://scikit-learn.org/stable/model_persistence.html",
+              "type": "docs",
+              "description": "Best practices for serializing and loading trained ML models safely."
+            }
+          ],
+          "status": "not_started"
+        },
+        {
+          "id": "proj_ai_intermediate_rag_pipeline_1792231046865_1",
+          "title": "Retrieval-Augmented Generation (RAG) & Vector Search Service",
+          "track": "ai_ml",
+          "difficulty": "intermediate",
+          "sequenceOrder": 2,
+          "description": "Build an end-to-end semantic search and Retrieval-Augmented Generation system using text embeddings, vector similarity indexing, and structured prompt engineering.",
+          "estimatedEffort": "16-20 hours (2-3 weeks)",
+          "prerequisites": [
+            "Model Serving & Inference Microservice with FastAPI"
+          ],
+          "skillsCovered": [
+            "Python",
+            "FastAPI",
+            "LLM & Generative AI",
+            "PostgreSQL",
+            "Docker"
+          ],
+          "targetSkillGaps": [
+            "Docker",
+            "Python",
+            "FastAPI",
+            "PostgreSQL"
+          ],
+          "roleFitExplanation": "Essential for modern GenAI roles: proves hands-on ability to build retrieval pipelines, integrate embeddings, and prevent hallucination with grounded context.",
+          "milestones": [
+            {
+              "id": "m1_chunking_embeddings",
+              "title": "Document Ingestion, Chunking & Embeddings",
+              "description": "Build a document processor that extracts text, splits it into overlapping semantic chunks, and generates embeddings.",
+              "acceptanceCriteria": [
+                "Recursive character or token-aware chunking pipeline with configurable chunk size and overlap",
+                "Embedding generator generating normalized dense vectors using an open model or API"
+              ],
+              "expectedEvidence": "Chunking logic in app/ingestion/chunker.py and embeddings client in app/services/embeddings.py",
+              "isCompleted": false
+            },
+            {
+              "id": "m2_vector_indexing",
+              "title": "Vector Store & Cosine Similarity Indexing",
+              "description": "Store and query dense vectors using pgvector in PostgreSQL or an in-memory vector index.",
+              "acceptanceCriteria": [
+                "Vector table with IVFFlat or HNSW cosine similarity index",
+                "Query endpoint retrieving top-k most relevant text chunks based on semantic distance threshold"
+              ],
+              "expectedEvidence": "Vector store adapter in app/db/vector_store.py with SQL similarity queries",
+              "isCompleted": false
+            },
+            {
+              "id": "m3_grounded_synthesis",
+              "title": "Grounded Answer Generation with Citations",
+              "description": "Assemble retrieved context chunks into a prompt and return answers with source document citations.",
+              "acceptanceCriteria": [
+                "Prompt template injecting retrieved context and instructing model to cite chunk sources",
+                "Structured JSON response including the synthesized answer alongside verified chunk IDs and source titles",
+                "Fall-back mechanism when semantic similarity is below minimum confidence threshold"
+              ],
+              "expectedEvidence": "Synthesis pipeline in app/services/rag_synthesizer.py and API route in app/api/rag.py",
+              "isCompleted": false
+            }
+          ],
+          "learningResources": [
+            {
+              "title": "pgvector Official Documentation",
+              "url": "https://github.com/pgvector/pgvector",
+              "type": "docs",
+              "description": "Open-source vector similarity search for PostgreSQL."
+            },
+            {
+              "title": "HuggingFace Embeddings & Sentence Transformers",
+              "url": "https://www.sbert.net/",
+              "type": "docs",
+              "description": "Comprehensive library for state-of-the-art sentence, text, and image embeddings."
+            }
+          ],
+          "status": "not_started"
+        },
+        {
+          "id": "proj_backend_advanced_container_ci_service_1792231046865_2",
+          "title": "Containerized Microservice with CI/CD Pipeline & Health Checks",
+          "track": "backend",
+          "difficulty": "advanced",
+          "sequenceOrder": 3,
+          "description": "Package a production backend service into multi-stage Docker containers and configure an automated GitHub Actions CI workflow with linting, testing, and vulnerability scanning.",
+          "estimatedEffort": "16-20 hours (2-3 weeks)",
+          "prerequisites": [
+            "Stateless Authentication & Role-Based Access Control (RBAC)"
+          ],
+          "skillsCovered": [
+            "Docker",
+            "CI/CD",
+            "Unit Testing",
+            "TypeScript",
+            "Node.js",
+            "Microservices"
+          ],
+          "targetSkillGaps": [
+            "Docker",
+            "Node.js",
+            "Microservices",
+            "TypeScript",
+            "Unit Testing"
+          ],
+          "roleFitExplanation": "High-value demonstration for production engineering: shows proficiency in DevOps practices, container hygiene, and automated continuous integration.",
+          "milestones": [
+            {
+              "id": "m1_docker_multistage",
+              "title": "Multi-Stage Dockerfile & Compose Configuration",
+              "description": "Create an optimized multi-stage Docker build separating compile time from minimal production runtime.",
+              "acceptanceCriteria": [
+                "Multi-stage Dockerfile using node:alpine or distroless base image for minimal attack surface",
+                "Non-root user (USER node) configured for execution",
+                "docker-compose.yml orchestrating the API and a PostgreSQL container with health checks"
+              ],
+              "expectedEvidence": "Dockerfile in root and docker-compose.yml with healthcheck configuration",
+              "isCompleted": false
+            },
+            {
+              "id": "m2_github_actions_ci",
+              "title": "Automated GitHub Actions CI Workflow",
+              "description": "Write a GitHub Actions pipeline triggering on pull requests and pushes to main.",
+              "acceptanceCriteria": [
+                "Pipeline runs linting, type-checking (tsc --noEmit), and automated unit tests in parallel",
+                "Runs test suite against an ephemeral PostgreSQL service container in GitHub Actions",
+                "Fails build if any test fails or linting reports errors"
+              ],
+              "expectedEvidence": "Workflow file in .github/workflows/ci.yml",
+              "isCompleted": false
+            },
+            {
+              "id": "m3_observability",
+              "title": "Graceful Shutdown & Structured Logging",
+              "description": "Implement SIGTERM/SIGINT signal trapping and structured JSON logging.",
+              "acceptanceCriteria": [
+                "SIGTERM handler stops receiving new connections and drains database pool before process exit",
+                "Structured JSON logs (Pino or Winston) including request ID, duration, and status code"
+              ],
+              "expectedEvidence": "Server lifecycle handling in src/server.ts and logger utility in src/utils/logger.ts",
+              "isCompleted": false
+            }
+          ],
+          "learningResources": [
+            {
+              "title": "Docker Documentation: Multi-stage Builds",
+              "url": "https://docs.docker.com/build/building/multi-stage/",
+              "type": "docs",
+              "description": "Official Docker guide for creating lightweight, secure production images."
+            },
+            {
+              "title": "GitHub Actions Documentation",
+              "url": "https://docs.github.com/en/actions",
+              "type": "docs",
+              "description": "Official documentation for GitHub Actions workflow syntax and service containers."
+            }
+          ],
+          "status": "not_started"
+        }
+      ],
+      "overallProgressPct": 0,
+      "version": 5,
+      "previousVersionId": "rdm_1792231044896_zh1sf",
+      "createdAt": "2026-10-17T09:57:26.866Z",
+      "updatedAt": "2026-10-17T09:57:26.866Z"
+    },
+    "rdm_1792231047045_55jnl": {
+      "id": "rdm_1792231047045_55jnl",
+      "assessmentId": "asmt_1792230168958_vb84",
+      "jobId": "manual_1792230168886_7mnis",
+      "jobTitle": "Senior Backend Platform Engineer",
+      "jobCompany": "Cloudflare",
+      "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+      "repositoryId": 10101,
+      "repositoryFullName": "student-dev/cloud-microservice",
+      "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+      "assessmentVersion": 2,
+      "preferences": {
+        "targetRole": "Backend Engineer",
+        "targetCompany": "Cloudflare",
+        "seniority": "mid",
+        "weeklyHours": 12
+      },
+      "skillGaps": [
+        {
+          "skill": "Docker",
+          "category": "cloud_devops",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of Docker was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": true,
+          "priorityRank": 1,
+          "priorityScore": 100,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 100/100.",
+          "prerequisites": [
+            "Linux",
+            "Git"
+          ]
+        },
+        {
+          "skill": "Node.js",
+          "category": "backend",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of Node.js was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": true,
+          "priorityRank": 2,
+          "priorityScore": 100,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 100/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "Microservices",
+          "category": "apis_architecture",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of Microservices was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": true,
+          "priorityRank": 3,
+          "priorityScore": 90,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 5,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (5/15 pts) + Project coverage (10/10 pts) = Total Priority 90/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "Python",
+          "category": "languages",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Inferred technical requirement based on Senior Backend Platform Engineer role description",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of Python was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": false,
+          "priorityRank": 4,
+          "priorityScore": 85,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 25,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Inferred requirement for Senior Backend Platform Engineer (25/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 85/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "FastAPI",
+          "category": "backend",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Inferred technical requirement based on Senior Backend Platform Engineer role description",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of FastAPI was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": false,
+          "priorityRank": 5,
+          "priorityScore": 75,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 25,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 5,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Inferred requirement for Senior Backend Platform Engineer (25/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (5/15 pts) + Project coverage (10/10 pts) = Total Priority 75/100.",
+          "prerequisites": [
+            "Python",
+            "REST API"
+          ]
+        },
+        {
+          "skill": "JavaScript",
+          "category": "languages",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Inferred technical requirement based on Senior Backend Platform Engineer role description",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of JavaScript was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": false,
+          "priorityRank": 6,
+          "priorityScore": 70,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 25,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 5,
+            "feasibilityBonus": 5
+          },
+          "priorityExplanation": "Inferred requirement for Senior Backend Platform Engineer (25/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (5/15 pts) + Project coverage (5/10 pts) = Total Priority 70/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "PostgreSQL",
+          "category": "databases",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "demonstrated",
+          "evidenceCitations": [
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/db/postgres.ts",
+              "startLine": 1,
+              "endLine": 4,
+              "evidenceSnippet": "import { Pool } from 'pg';\nexport const pool = new Pool({\n  connectionString: process.env.DATABASE_URL,\n});",
+              "explanation": "PostgreSQL schema DDL, relational joins, or connection pool",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/db/postgres.ts",
+              "startLine": 6,
+              "endLine": 9,
+              "evidenceSnippet": "export async function getUserById(id: string) {\n  const result = await pool.query('SELECT * FROM users WHERE id = $1', [id]);\n  return result.rows[0];\n}",
+              "explanation": "PostgreSQL schema DDL, relational joins, or connection pool",
+              "isValidated": true
+            }
+          ],
+          "confidence": "high",
+          "assessmentReason": "Demonstrated in src/db/postgres.ts (L6-9): PostgreSQL schema DDL, relational joins, or connection pool.",
+          "limitations": "Evaluated within inspected repository scope at this commit.",
+          "isExplicitRequirement": true,
+          "priorityRank": 7,
+          "priorityScore": 65,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 0,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'demonstrated' (0/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 65/100.",
+          "prerequisites": [
+            "SQL"
+          ]
+        },
+        {
+          "skill": "REST API",
+          "category": "apis_architecture",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "demonstrated",
+          "evidenceCitations": [
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/server.ts",
+              "startLine": 4,
+              "endLine": 7,
+              "evidenceSnippet": "\napp.get('/api/health', (req, res) => {\n  res.status(200).json({ status: 'healthy', uptime: process.uptime() });\n});",
+              "explanation": "REST endpoint request handling with structured HTTP status response",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/server.ts",
+              "startLine": 5,
+              "endLine": 8,
+              "evidenceSnippet": "app.get('/api/health', (req, res) => {\n  res.status(200).json({ status: 'healthy', uptime: process.uptime() });\n});\n",
+              "explanation": "REST endpoint request handling with structured HTTP status response",
+              "isValidated": true
+            }
+          ],
+          "confidence": "high",
+          "assessmentReason": "Demonstrated in src/server.ts (L5-8): REST endpoint request handling with structured HTTP status response.",
+          "limitations": "Evaluated within inspected repository scope at this commit.",
+          "isExplicitRequirement": true,
+          "priorityRank": 8,
+          "priorityScore": 65,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 0,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'demonstrated' (0/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 65/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "TypeScript",
+          "category": "languages",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "demonstrated",
+          "evidenceCitations": [
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/types/user.ts",
+              "startLine": 1,
+              "endLine": 3,
+              "evidenceSnippet": "export interface UserProfile {\n  id: string;\n  email: string;",
+              "explanation": "Strong TypeScript type definitions or interfaces",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/types/user.ts",
+              "startLine": 1,
+              "endLine": 4,
+              "evidenceSnippet": "export interface UserProfile {\n  id: string;\n  email: string;\n  isActive: boolean;",
+              "explanation": "Strong TypeScript type definitions or interfaces",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/types/user.ts",
+              "startLine": 2,
+              "endLine": 5,
+              "evidenceSnippet": "  id: string;\n  email: string;\n  isActive: boolean;\n  createdAt: Date;",
+              "explanation": "Strong TypeScript type definitions or interfaces",
+              "isValidated": true
+            }
+          ],
+          "confidence": "high",
+          "assessmentReason": "Demonstrated in src/types/user.ts (L2-5): Strong TypeScript type definitions or interfaces.",
+          "limitations": "Evaluated within inspected repository scope at this commit.",
+          "isExplicitRequirement": true,
+          "priorityRank": 9,
+          "priorityScore": 65,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 0,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'demonstrated' (0/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 65/100.",
+          "prerequisites": [
+            "JavaScript"
+          ]
+        },
+        {
+          "skill": "Unit Testing",
+          "category": "testing_practices",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "demonstrated",
+          "evidenceCitations": [
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "tests/server.test.ts",
+              "startLine": 3,
+              "endLine": 6,
+              "evidenceSnippet": "\ndescribe('Healthcheck API', () => {\n  it('returns 200 OK', () => {\n    expect(app).toBeDefined();",
+              "explanation": "Automated test suite assertions with describe/it or pytest functions",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "tests/server.test.ts",
+              "startLine": 4,
+              "endLine": 7,
+              "evidenceSnippet": "describe('Healthcheck API', () => {\n  it('returns 200 OK', () => {\n    expect(app).toBeDefined();\n  });",
+              "explanation": "Automated test suite assertions with describe/it or pytest functions",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "tests/server.test.ts",
+              "startLine": 5,
+              "endLine": 8,
+              "evidenceSnippet": "  it('returns 200 OK', () => {\n    expect(app).toBeDefined();\n  });\n});",
+              "explanation": "Automated test suite assertions with describe/it or pytest functions",
+              "isValidated": true
+            }
+          ],
+          "confidence": "high",
+          "assessmentReason": "Demonstrated in tests/server.test.ts (L5-8): Automated test suite assertions with describe/it or pytest functions.",
+          "limitations": "Evaluated within inspected repository scope at this commit.",
+          "isExplicitRequirement": true,
+          "priorityRank": 10,
+          "priorityScore": 55,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 0,
+            "prerequisiteValue": 5,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'demonstrated' (0/35 pts) + Prerequisite index (5/15 pts) + Project coverage (10/10 pts) = Total Priority 55/100.",
+          "prerequisites": []
+        }
+      ],
+      "recommendedProjects": [
+        {
+          "id": "proj_ai_foundational_model_serving_api_1792231047045_0",
+          "title": "Model Serving & Inference Microservice with FastAPI",
+          "track": "ai_ml",
+          "difficulty": "foundational",
+          "sequenceOrder": 1,
+          "description": "Package a machine learning model into a production-ready asynchronous Python REST API using FastAPI, Pydantic data validation, and automated batching.",
+          "estimatedEffort": "12-16 hours (2 weeks)",
+          "prerequisites": [
+            "Basic Python programming and NumPy / Pandas familiarity"
+          ],
+          "skillsCovered": [
+            "Python",
+            "FastAPI",
+            "Machine Learning",
+            "Docker",
+            "REST API"
+          ],
+          "targetSkillGaps": [
+            "Docker",
+            "Python",
+            "FastAPI",
+            "REST API"
+          ],
+          "roleFitExplanation": "Core capability for AI/ML Engineers: demonstrates taking trained models out of notebooks and deploying them as robust, production-grade microservices.",
+          "milestones": [
+            {
+              "id": "m1_pydantic_schemas",
+              "title": "Validated Input/Output Schemas with Pydantic",
+              "description": "Define strict type validation schemas for model inference requests and responses.",
+              "acceptanceCriteria": [
+                "Pydantic BaseModel with field constraints (ranges, string lengths, regex patterns)",
+                "Automated OpenAPI / Swagger interactive documentation generated at /docs",
+                "Explicit 422 Unprocessable Entity error payloads returned on malformed feature inputs"
+              ],
+              "expectedEvidence": "Pydantic schemas in app/schemas/inference.py and FastAPI app in app/main.py",
+              "isCompleted": false
+            },
+            {
+              "id": "m2_async_inference_pipeline",
+              "title": "Model Loading & Asynchronous Predict Endpoint",
+              "description": "Load serialized model artifacts at startup and expose high-throughput prediction endpoints.",
+              "acceptanceCriteria": [
+                "Model loaded into memory once on application lifespan startup (not on every request)",
+                "POST /predict endpoint running inference and returning structured predictions with confidence scores",
+                "Batch prediction endpoint POST /predict/batch processing arrays of items efficiently"
+              ],
+              "expectedEvidence": "Model loader in app/services/model_service.py and inference route in app/api/routes.py",
+              "isCompleted": false
+            },
+            {
+              "id": "m3_docker_packaging",
+              "title": "Docker Containerization for ML Runtime",
+              "description": "Containerize the FastAPI model service with pinned Python dependencies and health checks.",
+              "acceptanceCriteria": [
+                "Dockerfile with pinned pip versions via requirements.txt or poetry.lock",
+                "Container runs as non-root user with Uvicorn worker configuration",
+                "Automated test running pytest over sample inference requests inside container"
+              ],
+              "expectedEvidence": "Dockerfile in root and tests in tests/test_inference.py",
+              "isCompleted": false
+            }
+          ],
+          "learningResources": [
+            {
+              "title": "FastAPI Official Documentation",
+              "url": "https://fastapi.tiangolo.com/",
+              "type": "docs",
+              "description": "Complete guide to asynchronous Python web frameworks, Pydantic, and dependency injection."
+            },
+            {
+              "title": "Scikit-Learn Model Persistence Guide",
+              "url": "https://scikit-learn.org/stable/model_persistence.html",
+              "type": "docs",
+              "description": "Best practices for serializing and loading trained ML models safely."
+            }
+          ],
+          "status": "not_started"
+        },
+        {
+          "id": "proj_ai_intermediate_rag_pipeline_1792231047045_1",
+          "title": "Retrieval-Augmented Generation (RAG) & Vector Search Service",
+          "track": "ai_ml",
+          "difficulty": "intermediate",
+          "sequenceOrder": 2,
+          "description": "Build an end-to-end semantic search and Retrieval-Augmented Generation system using text embeddings, vector similarity indexing, and structured prompt engineering.",
+          "estimatedEffort": "16-20 hours (2-3 weeks)",
+          "prerequisites": [
+            "Model Serving & Inference Microservice with FastAPI"
+          ],
+          "skillsCovered": [
+            "Python",
+            "FastAPI",
+            "LLM & Generative AI",
+            "PostgreSQL",
+            "Docker"
+          ],
+          "targetSkillGaps": [
+            "Docker",
+            "Python",
+            "FastAPI",
+            "PostgreSQL"
+          ],
+          "roleFitExplanation": "Essential for modern GenAI roles: proves hands-on ability to build retrieval pipelines, integrate embeddings, and prevent hallucination with grounded context.",
+          "milestones": [
+            {
+              "id": "m1_chunking_embeddings",
+              "title": "Document Ingestion, Chunking & Embeddings",
+              "description": "Build a document processor that extracts text, splits it into overlapping semantic chunks, and generates embeddings.",
+              "acceptanceCriteria": [
+                "Recursive character or token-aware chunking pipeline with configurable chunk size and overlap",
+                "Embedding generator generating normalized dense vectors using an open model or API"
+              ],
+              "expectedEvidence": "Chunking logic in app/ingestion/chunker.py and embeddings client in app/services/embeddings.py",
+              "isCompleted": false
+            },
+            {
+              "id": "m2_vector_indexing",
+              "title": "Vector Store & Cosine Similarity Indexing",
+              "description": "Store and query dense vectors using pgvector in PostgreSQL or an in-memory vector index.",
+              "acceptanceCriteria": [
+                "Vector table with IVFFlat or HNSW cosine similarity index",
+                "Query endpoint retrieving top-k most relevant text chunks based on semantic distance threshold"
+              ],
+              "expectedEvidence": "Vector store adapter in app/db/vector_store.py with SQL similarity queries",
+              "isCompleted": false
+            },
+            {
+              "id": "m3_grounded_synthesis",
+              "title": "Grounded Answer Generation with Citations",
+              "description": "Assemble retrieved context chunks into a prompt and return answers with source document citations.",
+              "acceptanceCriteria": [
+                "Prompt template injecting retrieved context and instructing model to cite chunk sources",
+                "Structured JSON response including the synthesized answer alongside verified chunk IDs and source titles",
+                "Fall-back mechanism when semantic similarity is below minimum confidence threshold"
+              ],
+              "expectedEvidence": "Synthesis pipeline in app/services/rag_synthesizer.py and API route in app/api/rag.py",
+              "isCompleted": false
+            }
+          ],
+          "learningResources": [
+            {
+              "title": "pgvector Official Documentation",
+              "url": "https://github.com/pgvector/pgvector",
+              "type": "docs",
+              "description": "Open-source vector similarity search for PostgreSQL."
+            },
+            {
+              "title": "HuggingFace Embeddings & Sentence Transformers",
+              "url": "https://www.sbert.net/",
+              "type": "docs",
+              "description": "Comprehensive library for state-of-the-art sentence, text, and image embeddings."
+            }
+          ],
+          "status": "not_started"
+        },
+        {
+          "id": "proj_backend_advanced_container_ci_service_1792231047045_2",
+          "title": "Containerized Microservice with CI/CD Pipeline & Health Checks",
+          "track": "backend",
+          "difficulty": "advanced",
+          "sequenceOrder": 3,
+          "description": "Package a production backend service into multi-stage Docker containers and configure an automated GitHub Actions CI workflow with linting, testing, and vulnerability scanning.",
+          "estimatedEffort": "16-20 hours (2-3 weeks)",
+          "prerequisites": [
+            "Stateless Authentication & Role-Based Access Control (RBAC)"
+          ],
+          "skillsCovered": [
+            "Docker",
+            "CI/CD",
+            "Unit Testing",
+            "TypeScript",
+            "Node.js",
+            "Microservices"
+          ],
+          "targetSkillGaps": [
+            "Docker",
+            "Node.js",
+            "Microservices",
+            "TypeScript",
+            "Unit Testing"
+          ],
+          "roleFitExplanation": "High-value demonstration for production engineering: shows proficiency in DevOps practices, container hygiene, and automated continuous integration.",
+          "milestones": [
+            {
+              "id": "m1_docker_multistage",
+              "title": "Multi-Stage Dockerfile & Compose Configuration",
+              "description": "Create an optimized multi-stage Docker build separating compile time from minimal production runtime.",
+              "acceptanceCriteria": [
+                "Multi-stage Dockerfile using node:alpine or distroless base image for minimal attack surface",
+                "Non-root user (USER node) configured for execution",
+                "docker-compose.yml orchestrating the API and a PostgreSQL container with health checks"
+              ],
+              "expectedEvidence": "Dockerfile in root and docker-compose.yml with healthcheck configuration",
+              "isCompleted": false
+            },
+            {
+              "id": "m2_github_actions_ci",
+              "title": "Automated GitHub Actions CI Workflow",
+              "description": "Write a GitHub Actions pipeline triggering on pull requests and pushes to main.",
+              "acceptanceCriteria": [
+                "Pipeline runs linting, type-checking (tsc --noEmit), and automated unit tests in parallel",
+                "Runs test suite against an ephemeral PostgreSQL service container in GitHub Actions",
+                "Fails build if any test fails or linting reports errors"
+              ],
+              "expectedEvidence": "Workflow file in .github/workflows/ci.yml",
+              "isCompleted": false
+            },
+            {
+              "id": "m3_observability",
+              "title": "Graceful Shutdown & Structured Logging",
+              "description": "Implement SIGTERM/SIGINT signal trapping and structured JSON logging.",
+              "acceptanceCriteria": [
+                "SIGTERM handler stops receiving new connections and drains database pool before process exit",
+                "Structured JSON logs (Pino or Winston) including request ID, duration, and status code"
+              ],
+              "expectedEvidence": "Server lifecycle handling in src/server.ts and logger utility in src/utils/logger.ts",
+              "isCompleted": false
+            }
+          ],
+          "learningResources": [
+            {
+              "title": "Docker Documentation: Multi-stage Builds",
+              "url": "https://docs.docker.com/build/building/multi-stage/",
+              "type": "docs",
+              "description": "Official Docker guide for creating lightweight, secure production images."
+            },
+            {
+              "title": "GitHub Actions Documentation",
+              "url": "https://docs.github.com/en/actions",
+              "type": "docs",
+              "description": "Official documentation for GitHub Actions workflow syntax and service containers."
+            }
+          ],
+          "status": "not_started"
+        }
+      ],
+      "overallProgressPct": 0,
+      "version": 6,
+      "previousVersionId": "rdm_1792231046866_6zeov",
+      "createdAt": "2026-10-17T09:57:27.045Z",
+      "updatedAt": "2026-10-17T09:57:27.045Z"
+    },
+    "rdm_1792231047261_oqlcr": {
+      "id": "rdm_1792231047261_oqlcr",
+      "assessmentId": "asmt_1792230168958_vb84",
+      "jobId": "manual_1792230168886_7mnis",
+      "jobTitle": "Senior Backend Platform Engineer",
+      "jobCompany": "Cloudflare",
+      "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+      "repositoryId": 10101,
+      "repositoryFullName": "student-dev/cloud-microservice",
+      "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+      "assessmentVersion": 2,
+      "preferences": {
+        "targetRole": "Backend Engineer",
+        "targetCompany": "Cloudflare",
+        "seniority": "mid",
+        "weeklyHours": 12
+      },
+      "skillGaps": [
+        {
+          "skill": "Docker",
+          "category": "cloud_devops",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of Docker was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": true,
+          "priorityRank": 1,
+          "priorityScore": 100,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 100/100.",
+          "prerequisites": [
+            "Linux",
+            "Git"
+          ]
+        },
+        {
+          "skill": "Node.js",
+          "category": "backend",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of Node.js was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": true,
+          "priorityRank": 2,
+          "priorityScore": 100,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 100/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "Microservices",
+          "category": "apis_architecture",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of Microservices was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": true,
+          "priorityRank": 3,
+          "priorityScore": 90,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 5,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (5/15 pts) + Project coverage (10/10 pts) = Total Priority 90/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "Python",
+          "category": "languages",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Inferred technical requirement based on Senior Backend Platform Engineer role description",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of Python was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": false,
+          "priorityRank": 4,
+          "priorityScore": 85,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 25,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Inferred requirement for Senior Backend Platform Engineer (25/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 85/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "FastAPI",
+          "category": "backend",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Inferred technical requirement based on Senior Backend Platform Engineer role description",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of FastAPI was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": false,
+          "priorityRank": 5,
+          "priorityScore": 75,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 25,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 5,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Inferred requirement for Senior Backend Platform Engineer (25/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (5/15 pts) + Project coverage (10/10 pts) = Total Priority 75/100.",
+          "prerequisites": [
+            "Python",
+            "REST API"
+          ]
+        },
+        {
+          "skill": "JavaScript",
+          "category": "languages",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Inferred technical requirement based on Senior Backend Platform Engineer role description",
+          "evidenceStatus": "not_demonstrated_in_scope",
+          "evidenceCitations": [],
+          "confidence": "high",
+          "assessmentReason": "No code-level implementation of JavaScript was found in inspected repository files. (Note: Missing code evidence in the analysed scope does NOT imply lack of ability or knowledge).",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "isExplicitRequirement": false,
+          "priorityRank": 6,
+          "priorityScore": 70,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 25,
+            "evidenceGapSeverity": 35,
+            "prerequisiteValue": 5,
+            "feasibilityBonus": 5
+          },
+          "priorityExplanation": "Inferred requirement for Senior Backend Platform Engineer (25/40 pts) + Evidence status 'not_demonstrated_in_scope' (35/35 pts) + Prerequisite index (5/15 pts) + Project coverage (5/10 pts) = Total Priority 70/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "PostgreSQL",
+          "category": "databases",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "demonstrated",
+          "evidenceCitations": [
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/db/postgres.ts",
+              "startLine": 1,
+              "endLine": 4,
+              "evidenceSnippet": "import { Pool } from 'pg';\nexport const pool = new Pool({\n  connectionString: process.env.DATABASE_URL,\n});",
+              "explanation": "PostgreSQL schema DDL, relational joins, or connection pool",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/db/postgres.ts",
+              "startLine": 6,
+              "endLine": 9,
+              "evidenceSnippet": "export async function getUserById(id: string) {\n  const result = await pool.query('SELECT * FROM users WHERE id = $1', [id]);\n  return result.rows[0];\n}",
+              "explanation": "PostgreSQL schema DDL, relational joins, or connection pool",
+              "isValidated": true
+            }
+          ],
+          "confidence": "high",
+          "assessmentReason": "Demonstrated in src/db/postgres.ts (L6-9): PostgreSQL schema DDL, relational joins, or connection pool.",
+          "limitations": "Evaluated within inspected repository scope at this commit.",
+          "isExplicitRequirement": true,
+          "priorityRank": 7,
+          "priorityScore": 65,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 0,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'demonstrated' (0/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 65/100.",
+          "prerequisites": [
+            "SQL"
+          ]
+        },
+        {
+          "skill": "REST API",
+          "category": "apis_architecture",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "demonstrated",
+          "evidenceCitations": [
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/server.ts",
+              "startLine": 4,
+              "endLine": 7,
+              "evidenceSnippet": "\napp.get('/api/health', (req, res) => {\n  res.status(200).json({ status: 'healthy', uptime: process.uptime() });\n});",
+              "explanation": "REST endpoint request handling with structured HTTP status response",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/server.ts",
+              "startLine": 5,
+              "endLine": 8,
+              "evidenceSnippet": "app.get('/api/health', (req, res) => {\n  res.status(200).json({ status: 'healthy', uptime: process.uptime() });\n});\n",
+              "explanation": "REST endpoint request handling with structured HTTP status response",
+              "isValidated": true
+            }
+          ],
+          "confidence": "high",
+          "assessmentReason": "Demonstrated in src/server.ts (L5-8): REST endpoint request handling with structured HTTP status response.",
+          "limitations": "Evaluated within inspected repository scope at this commit.",
+          "isExplicitRequirement": true,
+          "priorityRank": 8,
+          "priorityScore": 65,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 0,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'demonstrated' (0/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 65/100.",
+          "prerequisites": []
+        },
+        {
+          "skill": "TypeScript",
+          "category": "languages",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "demonstrated",
+          "evidenceCitations": [
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/types/user.ts",
+              "startLine": 1,
+              "endLine": 3,
+              "evidenceSnippet": "export interface UserProfile {\n  id: string;\n  email: string;",
+              "explanation": "Strong TypeScript type definitions or interfaces",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/types/user.ts",
+              "startLine": 1,
+              "endLine": 4,
+              "evidenceSnippet": "export interface UserProfile {\n  id: string;\n  email: string;\n  isActive: boolean;",
+              "explanation": "Strong TypeScript type definitions or interfaces",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "src/types/user.ts",
+              "startLine": 2,
+              "endLine": 5,
+              "evidenceSnippet": "  id: string;\n  email: string;\n  isActive: boolean;\n  createdAt: Date;",
+              "explanation": "Strong TypeScript type definitions or interfaces",
+              "isValidated": true
+            }
+          ],
+          "confidence": "high",
+          "assessmentReason": "Demonstrated in src/types/user.ts (L2-5): Strong TypeScript type definitions or interfaces.",
+          "limitations": "Evaluated within inspected repository scope at this commit.",
+          "isExplicitRequirement": true,
+          "priorityRank": 9,
+          "priorityScore": 65,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 0,
+            "prerequisiteValue": 15,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'demonstrated' (0/35 pts) + Prerequisite index (15/15 pts) + Project coverage (10/10 pts) = Total Priority 65/100.",
+          "prerequisites": [
+            "JavaScript"
+          ]
+        },
+        {
+          "skill": "Unit Testing",
+          "category": "testing_practices",
+          "requiredProficiency": "competent",
+          "jobSource": "Cloudflare (manual)",
+          "jobSourceUrl": "https://careers.cloudflare.com/jobs/senior-backend-engineer",
+          "supportingRequirementText": "Explicitly listed in requirements for Senior Backend Platform Engineer at Cloudflare",
+          "evidenceStatus": "demonstrated",
+          "evidenceCitations": [
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "tests/server.test.ts",
+              "startLine": 3,
+              "endLine": 6,
+              "evidenceSnippet": "\ndescribe('Healthcheck API', () => {\n  it('returns 200 OK', () => {\n    expect(app).toBeDefined();",
+              "explanation": "Automated test suite assertions with describe/it or pytest functions",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "tests/server.test.ts",
+              "startLine": 4,
+              "endLine": 7,
+              "evidenceSnippet": "describe('Healthcheck API', () => {\n  it('returns 200 OK', () => {\n    expect(app).toBeDefined();\n  });",
+              "explanation": "Automated test suite assertions with describe/it or pytest functions",
+              "isValidated": true
+            },
+            {
+              "repository": "student-dev/cloud-microservice",
+              "commitSha": "b2e9d5f09876543210abcdef0123456789abcdef",
+              "filePath": "tests/server.test.ts",
+              "startLine": 5,
+              "endLine": 8,
+              "evidenceSnippet": "  it('returns 200 OK', () => {\n    expect(app).toBeDefined();\n  });\n});",
+              "explanation": "Automated test suite assertions with describe/it or pytest functions",
+              "isValidated": true
+            }
+          ],
+          "confidence": "high",
+          "assessmentReason": "Demonstrated in tests/server.test.ts (L5-8): Automated test suite assertions with describe/it or pytest functions.",
+          "limitations": "Evaluated within inspected repository scope at this commit.",
+          "isExplicitRequirement": true,
+          "priorityRank": 10,
+          "priorityScore": 55,
+          "priorityBreakdown": {
+            "jobRelevanceWeight": 40,
+            "evidenceGapSeverity": 0,
+            "prerequisiteValue": 5,
+            "feasibilityBonus": 10
+          },
+          "priorityExplanation": "Explicit requirement for Senior Backend Platform Engineer (40/40 pts) + Evidence status 'demonstrated' (0/35 pts) + Prerequisite index (5/15 pts) + Project coverage (10/10 pts) = Total Priority 55/100.",
+          "prerequisites": []
+        }
+      ],
+      "recommendedProjects": [
+        {
+          "id": "proj_ai_foundational_model_serving_api_1792231047261_0",
+          "title": "Model Serving & Inference Microservice with FastAPI",
+          "track": "ai_ml",
+          "difficulty": "foundational",
+          "sequenceOrder": 1,
+          "description": "Package a machine learning model into a production-ready asynchronous Python REST API using FastAPI, Pydantic data validation, and automated batching.",
+          "estimatedEffort": "12-16 hours (2 weeks)",
+          "prerequisites": [
+            "Basic Python programming and NumPy / Pandas familiarity"
+          ],
+          "skillsCovered": [
+            "Python",
+            "FastAPI",
+            "Machine Learning",
+            "Docker",
+            "REST API"
+          ],
+          "targetSkillGaps": [
+            "Docker",
+            "Python",
+            "FastAPI",
+            "REST API"
+          ],
+          "roleFitExplanation": "Core capability for AI/ML Engineers: demonstrates taking trained models out of notebooks and deploying them as robust, production-grade microservices.",
+          "milestones": [
+            {
+              "id": "m1_pydantic_schemas",
+              "title": "Validated Input/Output Schemas with Pydantic",
+              "description": "Define strict type validation schemas for model inference requests and responses.",
+              "acceptanceCriteria": [
+                "Pydantic BaseModel with field constraints (ranges, string lengths, regex patterns)",
+                "Automated OpenAPI / Swagger interactive documentation generated at /docs",
+                "Explicit 422 Unprocessable Entity error payloads returned on malformed feature inputs"
+              ],
+              "expectedEvidence": "Pydantic schemas in app/schemas/inference.py and FastAPI app in app/main.py",
+              "isCompleted": false
+            },
+            {
+              "id": "m2_async_inference_pipeline",
+              "title": "Model Loading & Asynchronous Predict Endpoint",
+              "description": "Load serialized model artifacts at startup and expose high-throughput prediction endpoints.",
+              "acceptanceCriteria": [
+                "Model loaded into memory once on application lifespan startup (not on every request)",
+                "POST /predict endpoint running inference and returning structured predictions with confidence scores",
+                "Batch prediction endpoint POST /predict/batch processing arrays of items efficiently"
+              ],
+              "expectedEvidence": "Model loader in app/services/model_service.py and inference route in app/api/routes.py",
+              "isCompleted": false
+            },
+            {
+              "id": "m3_docker_packaging",
+              "title": "Docker Containerization for ML Runtime",
+              "description": "Containerize the FastAPI model service with pinned Python dependencies and health checks.",
+              "acceptanceCriteria": [
+                "Dockerfile with pinned pip versions via requirements.txt or poetry.lock",
+                "Container runs as non-root user with Uvicorn worker configuration",
+                "Automated test running pytest over sample inference requests inside container"
+              ],
+              "expectedEvidence": "Dockerfile in root and tests in tests/test_inference.py",
+              "isCompleted": false
+            }
+          ],
+          "learningResources": [
+            {
+              "title": "FastAPI Official Documentation",
+              "url": "https://fastapi.tiangolo.com/",
+              "type": "docs",
+              "description": "Complete guide to asynchronous Python web frameworks, Pydantic, and dependency injection."
+            },
+            {
+              "title": "Scikit-Learn Model Persistence Guide",
+              "url": "https://scikit-learn.org/stable/model_persistence.html",
+              "type": "docs",
+              "description": "Best practices for serializing and loading trained ML models safely."
+            }
+          ],
+          "status": "not_started"
+        },
+        {
+          "id": "proj_ai_intermediate_rag_pipeline_1792231047261_1",
+          "title": "Retrieval-Augmented Generation (RAG) & Vector Search Service",
+          "track": "ai_ml",
+          "difficulty": "intermediate",
+          "sequenceOrder": 2,
+          "description": "Build an end-to-end semantic search and Retrieval-Augmented Generation system using text embeddings, vector similarity indexing, and structured prompt engineering.",
+          "estimatedEffort": "16-20 hours (2-3 weeks)",
+          "prerequisites": [
+            "Model Serving & Inference Microservice with FastAPI"
+          ],
+          "skillsCovered": [
+            "Python",
+            "FastAPI",
+            "LLM & Generative AI",
+            "PostgreSQL",
+            "Docker"
+          ],
+          "targetSkillGaps": [
+            "Docker",
+            "Python",
+            "FastAPI",
+            "PostgreSQL"
+          ],
+          "roleFitExplanation": "Essential for modern GenAI roles: proves hands-on ability to build retrieval pipelines, integrate embeddings, and prevent hallucination with grounded context.",
+          "milestones": [
+            {
+              "id": "m1_chunking_embeddings",
+              "title": "Document Ingestion, Chunking & Embeddings",
+              "description": "Build a document processor that extracts text, splits it into overlapping semantic chunks, and generates embeddings.",
+              "acceptanceCriteria": [
+                "Recursive character or token-aware chunking pipeline with configurable chunk size and overlap",
+                "Embedding generator generating normalized dense vectors using an open model or API"
+              ],
+              "expectedEvidence": "Chunking logic in app/ingestion/chunker.py and embeddings client in app/services/embeddings.py",
+              "isCompleted": false
+            },
+            {
+              "id": "m2_vector_indexing",
+              "title": "Vector Store & Cosine Similarity Indexing",
+              "description": "Store and query dense vectors using pgvector in PostgreSQL or an in-memory vector index.",
+              "acceptanceCriteria": [
+                "Vector table with IVFFlat or HNSW cosine similarity index",
+                "Query endpoint retrieving top-k most relevant text chunks based on semantic distance threshold"
+              ],
+              "expectedEvidence": "Vector store adapter in app/db/vector_store.py with SQL similarity queries",
+              "isCompleted": false
+            },
+            {
+              "id": "m3_grounded_synthesis",
+              "title": "Grounded Answer Generation with Citations",
+              "description": "Assemble retrieved context chunks into a prompt and return answers with source document citations.",
+              "acceptanceCriteria": [
+                "Prompt template injecting retrieved context and instructing model to cite chunk sources",
+                "Structured JSON response including the synthesized answer alongside verified chunk IDs and source titles",
+                "Fall-back mechanism when semantic similarity is below minimum confidence threshold"
+              ],
+              "expectedEvidence": "Synthesis pipeline in app/services/rag_synthesizer.py and API route in app/api/rag.py",
+              "isCompleted": false
+            }
+          ],
+          "learningResources": [
+            {
+              "title": "pgvector Official Documentation",
+              "url": "https://github.com/pgvector/pgvector",
+              "type": "docs",
+              "description": "Open-source vector similarity search for PostgreSQL."
+            },
+            {
+              "title": "HuggingFace Embeddings & Sentence Transformers",
+              "url": "https://www.sbert.net/",
+              "type": "docs",
+              "description": "Comprehensive library for state-of-the-art sentence, text, and image embeddings."
+            }
+          ],
+          "status": "not_started"
+        },
+        {
+          "id": "proj_backend_advanced_container_ci_service_1792231047261_2",
+          "title": "Containerized Microservice with CI/CD Pipeline & Health Checks",
+          "track": "backend",
+          "difficulty": "advanced",
+          "sequenceOrder": 3,
+          "description": "Package a production backend service into multi-stage Docker containers and configure an automated GitHub Actions CI workflow with linting, testing, and vulnerability scanning.",
+          "estimatedEffort": "16-20 hours (2-3 weeks)",
+          "prerequisites": [
+            "Stateless Authentication & Role-Based Access Control (RBAC)"
+          ],
+          "skillsCovered": [
+            "Docker",
+            "CI/CD",
+            "Unit Testing",
+            "TypeScript",
+            "Node.js",
+            "Microservices"
+          ],
+          "targetSkillGaps": [
+            "Docker",
+            "Node.js",
+            "Microservices",
+            "TypeScript",
+            "Unit Testing"
+          ],
+          "roleFitExplanation": "High-value demonstration for production engineering: shows proficiency in DevOps practices, container hygiene, and automated continuous integration.",
+          "milestones": [
+            {
+              "id": "m1_docker_multistage",
+              "title": "Multi-Stage Dockerfile & Compose Configuration",
+              "description": "Create an optimized multi-stage Docker build separating compile time from minimal production runtime.",
+              "acceptanceCriteria": [
+                "Multi-stage Dockerfile using node:alpine or distroless base image for minimal attack surface",
+                "Non-root user (USER node) configured for execution",
+                "docker-compose.yml orchestrating the API and a PostgreSQL container with health checks"
+              ],
+              "expectedEvidence": "Dockerfile in root and docker-compose.yml with healthcheck configuration",
+              "isCompleted": false
+            },
+            {
+              "id": "m2_github_actions_ci",
+              "title": "Automated GitHub Actions CI Workflow",
+              "description": "Write a GitHub Actions pipeline triggering on pull requests and pushes to main.",
+              "acceptanceCriteria": [
+                "Pipeline runs linting, type-checking (tsc --noEmit), and automated unit tests in parallel",
+                "Runs test suite against an ephemeral PostgreSQL service container in GitHub Actions",
+                "Fails build if any test fails or linting reports errors"
+              ],
+              "expectedEvidence": "Workflow file in .github/workflows/ci.yml",
+              "isCompleted": false
+            },
+            {
+              "id": "m3_observability",
+              "title": "Graceful Shutdown & Structured Logging",
+              "description": "Implement SIGTERM/SIGINT signal trapping and structured JSON logging.",
+              "acceptanceCriteria": [
+                "SIGTERM handler stops receiving new connections and drains database pool before process exit",
+                "Structured JSON logs (Pino or Winston) including request ID, duration, and status code"
+              ],
+              "expectedEvidence": "Server lifecycle handling in src/server.ts and logger utility in src/utils/logger.ts",
+              "isCompleted": false
+            }
+          ],
+          "learningResources": [
+            {
+              "title": "Docker Documentation: Multi-stage Builds",
+              "url": "https://docs.docker.com/build/building/multi-stage/",
+              "type": "docs",
+              "description": "Official Docker guide for creating lightweight, secure production images."
+            },
+            {
+              "title": "GitHub Actions Documentation",
+              "url": "https://docs.github.com/en/actions",
+              "type": "docs",
+              "description": "Official documentation for GitHub Actions workflow syntax and service containers."
+            }
+          ],
+          "status": "not_started"
+        }
+      ],
+      "overallProgressPct": 0,
+      "version": 7,
+      "previousVersionId": "rdm_1792231047045_55jnl",
+      "createdAt": "2026-10-17T09:57:27.261Z",
+      "updatedAt": "2026-10-17T09:57:27.261Z"
     }
   }
 }
