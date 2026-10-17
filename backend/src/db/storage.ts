@@ -64,7 +64,13 @@ export class StorageService {
   private data: StorageData;
 
   constructor(customPath?: string) {
-    this.dataFilePath = customPath || path.resolve(process.cwd(), 'data', 'career_coach_store.json');
+    if (customPath) {
+      this.dataFilePath = customPath;
+    } else if (process.env.VERCEL) {
+      this.dataFilePath = path.resolve('/tmp', 'career_coach_store.json');
+    } else {
+      this.dataFilePath = path.resolve(process.cwd(), 'data', 'career_coach_store.json');
+    }
     this.data = {
       jobs: {},
       repositories: {},

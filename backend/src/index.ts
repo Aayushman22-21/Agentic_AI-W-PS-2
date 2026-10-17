@@ -76,8 +76,12 @@ app.get('/health', (_req: Request, res: Response) => {
   });
 });
 
-const server = app.listen(PORT, () => {
-  console.log(`AI Career Coach Backend running on http://localhost:${PORT}`);
-});
+let server: any;
+if (!process.env.VERCEL) {
+  server = app.listen(PORT, () => {
+    console.log(`AI Career Coach Backend running on http://localhost:${PORT}`);
+  });
+}
 
 export { app, server };
+export default app;
