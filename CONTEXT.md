@@ -14,6 +14,15 @@ The system:
 - Strictly rejects documentation/README-only changes from falsely awarding technical skills.
 - Stores historical versions linked to commit SHAs (v1, v2, v3...) so student progress can be compared over time.
 
+### Repository & Version Control
+- **Remote Repository**: [https://github.com/Aayushman22-21/ai-career-coach](https://github.com/Aayushman22-21/ai-career-coach)
+- **Branch**: `main`
+- **Latest Commits**:
+  - `db18c76`: `chore(store): update assessed repositories and job requirement evaluations`
+  - `126007d`: `feat: Add backend, frontend, and database schema for AI Career Coach`
+  - `2085c05`: `Add files via upload`
+
+
 ### Tech Stack, Frameworks & Runtime Versions
 - **Runtime**: Node.js `v20.20.2`, npm `10.8.2`
 - **Backend**:
@@ -123,8 +132,9 @@ SUPABASE_SERVICE_ROLE_KEY=          # Optional: Remote Supabase service role key
 ### Exact Terminal Commands
 
 ```powershell
-# 1. Run all 21 automated backend tests
+# 1. Run all 25 automated backend tests
 npm test
+
 
 # 2. Run the end-to-end demonstration verification script
 npm run demo
@@ -169,26 +179,39 @@ npm run dev:frontend
    - Restrained, professional developer UI with dark navbar, subtle borders, and monospace accents.
    - All 9 pages connected to live backend APIs.
 8. **Automated Test Suite**:
-   - 21 Vitest tests across 4 test suites passing with 100% success rate.
+   - 25 Vitest tests across 4 test suites passing with 100% success rate.
    - End-to-end demonstration script (`npm run demo`) verified.
+9. **Remote GitHub Synchronization**:
+   - Repository: `https://github.com/Aayushman22-21/ai-career-coach` on `main`.
+   - All full-stack source code, documentation, test suites, and database stores committed and pushed cleanly.
 
 ---
 
 ## 4. Current Work in Progress & Active State
 
-- **Current State**: All core stages (Audit, Reusable Foundations, Assessment Engine, Webhooks & Polling, 9-Page Frontend, Automated Testing, and E2E Demo Script) are **100% implemented, tested, and passing**.
-- **Last Command Executed**: `npm test` (all 25 tests passed cleanly) & `npm run demo` (verified).
-- **Recent Major Fix**: GitHub API Rate-Limit Diagnostics & Resilience:
-  - Differentiated primary rate limit (`remaining: 0`), secondary limits (burst frequency / `Retry-After`), permission errors, and 401 bad credentials.
-  - Added in-memory TTL caching (10m for users & repos, 60m for trees & file blobs) and in-flight request deduplication.
-  - Reduced unnecessary quota usage by paging on demand rather than fetching 3 pages unconditionally on initial search.
-  - Added live quota status indicator (`/api/github/rate-limit-status`) and clear actionable error cards with retry buttons on frontend.
+- **Current State**: All core stages (Audit, Reusable Foundations, Assessment Engine, Webhooks & Polling, 9-Page Frontend, Automated Testing, E2E Demo Script, and Remote Push) are **100% complete, tested, and actively running**.
+- **Active Processes & Local Services**:
+  - **Backend Server**: Running as daemon on `http://localhost:4000` (`npm run dev:backend`). Health check `/health` responds `200 OK`.
+  - **Frontend Dev Server**: Running as daemon on `http://localhost:5173` (`npm run dev:frontend`). Vite React UI responds `200 OK`.
+- **Last Command Executed**:
+  - `git push origin main` -> pushed commits `126007d` and `db18c76` to `https://github.com/Aayushman22-21/ai-career-coach`.
+  - Service verification checks (`http://localhost:4000/health` & `http://localhost:5173/`).
+- **Recent Major Features & Fixes**:
+  - **GitHub API Rate-Limit Diagnostics & Resilience**:
+    - Differentiated primary rate limit (`remaining: 0`), secondary limits (burst frequency / `Retry-After`), permission errors, and 401 bad credentials.
+    - Added in-memory TTL caching (10m for users & repos, 60m for trees & file blobs) and in-flight request deduplication.
+    - Added live quota status indicator (`/api/github/rate-limit-status`) and clear actionable error cards with retry buttons on frontend.
+    - Personal Access Token configuration supported via `GITHUB_TOKEN` in `backend/.env` (boosting limits from 60 to 5,000 req/hr).
+  - **Real Portfolio Evaluation & Store Persistence**:
+    - Tested and evaluated authentic repositories (e.g., `sanskarshinde268/verifind-plus` assessed against custom/manual Amazon Full Stack Engineer job requirements).
+    - Code evidence snippets, line citations, and match breakdown saved in `backend/data/career_coach_store.json`.
 - **Working Files**:
   - `backend/src/github/githubService.ts` (diagnostics, caching, in-flight deduplication).
   - `backend/src/routes/api.ts` (structured GitHub API error handler & rate limit status endpoint).
   - `frontend/src/pages/RepoSelectionPage.tsx` (quota bar, action cards, result preservation).
-  - `backend/tests/github_and_resumes.test.ts` (expanded to 9 tests covering caching, limits, 401, 403, 404).
-- **Uncommitted Changes**: Clean workspace; all code files are persisted in `backend/` and `frontend/`.
+  - `backend/data/career_coach_store.json` (persisted jobs, repos, commits, and assessments).
+  - `backend/tests/` (25 unit and integration tests passing).
+- **Working Tree**: Clean workspace; all code files are persisted and synchronized with `origin/main`.
 
 ---
 
