@@ -504,6 +504,44 @@
           "minimumLevel": "competent"
         }
       ]
+    },
+    "manual_1792190519292_5dxms": {
+      "id": "manual_1792190519292_5dxms",
+      "source": "manual",
+      "company": "amazon",
+      "title": "full stack engineer",
+      "location": "Remote",
+      "isRemote": true,
+      "url": "",
+      "updatedAt": "2026-10-16T22:41:59.292Z",
+      "rawDescription": "aws , docker  , firebase  , c , c++ , frontend , api",
+      "requirements": [
+        {
+          "skill": "AWS",
+          "isExplicit": true,
+          "minimumLevel": "competent"
+        },
+        {
+          "skill": "C",
+          "isExplicit": true,
+          "minimumLevel": "competent"
+        },
+        {
+          "skill": "C++",
+          "isExplicit": true,
+          "minimumLevel": "competent"
+        },
+        {
+          "skill": "Docker",
+          "isExplicit": true,
+          "minimumLevel": "competent"
+        },
+        {
+          "skill": "Firebase",
+          "isExplicit": true,
+          "minimumLevel": "competent"
+        }
+      ]
     }
   },
   "repositories": {
@@ -9053,7 +9091,7 @@
       "default_branch": "main",
       "stars": 0,
       "forks": 0,
-      "updated_at": "2026-08-10T17:26:31Z",
+      "updated_at": "2026-10-16T19:34:28Z",
       "languages": {},
       "primary_language": "CSS",
       "topics": [],
@@ -9591,6 +9629,14 @@
       "date": "2026-10-15T12:37:33Z",
       "url": "https://github.com/codebynikhil08/PulseGuard/commit/0525518794a907ebd39f8ab32b7f4617bfa51756",
       "repositoryId": 1413954988
+    },
+    "acdcf56c387ec092131a191a5c8fa8cd91c8ac86": {
+      "sha": "acdcf56c387ec092131a191a5c8fa8cd91c8ac86",
+      "message": "feat: add asset management page with blockchain interaction utilities and UI components",
+      "author": "prof7turtle",
+      "date": "2026-09-11T13:31:31Z",
+      "url": "https://github.com/sanskarshinde268/verifind-plus/commit/acdcf56c387ec092131a191a5c8fa8cd91c8ac86",
+      "repositoryId": 1366645831
     }
   },
   "assessments": [
@@ -11455,6 +11501,111 @@
       "id": "asmt_1792177823910_1flj",
       "version": 1,
       "createdAt": "2026-10-16T19:10:23.910Z"
+    },
+    {
+      "jobId": "manual_1792190519292_5dxms",
+      "repositoryId": 1366645831,
+      "repositoryFullName": "sanskarshinde268/verifind-plus",
+      "commitSha": "acdcf56c387ec092131a191a5c8fa8cd91c8ac86",
+      "matchScore": {
+        "overallDemonstratedPct": 20,
+        "demonstratedCount": 0,
+        "partiallyDemonstratedCount": 2,
+        "notDemonstratedCount": 3,
+        "needsReviewCount": 0,
+        "totalRequirementsCount": 5,
+        "demonstratedSkills": [],
+        "partiallyDemonstratedSkills": [
+          "C",
+          "C++"
+        ],
+        "missingSkills": [
+          "AWS",
+          "Docker",
+          "Firebase"
+        ],
+        "needsReviewSkills": [],
+        "portfolioBonusSkills": [],
+        "scoreExplanation": "Demonstrated Match Score of 20% reflects code-verified implementations found in inspected repositories: 0 fully demonstrated (100% weight), 2 partially demonstrated (50% weight), 3 missing in inspected scope, and 0 requiring manual review across 5 total requirements.",
+        "hiringDisclaimer": "This score measures portfolio code evidence coverage against extracted technical job requirements. It does NOT predict or guarantee interview invitations, hiring probability, or cultural/system fit."
+      },
+      "assessedSkills": [
+        {
+          "skill": "AWS",
+          "status": "not_demonstrated_in_scope",
+          "explanation": "No code-level implementation of AWS was found in inspected repository files.",
+          "evidence": [],
+          "confidence": "high",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "recommendedNextStep": "Implement a working module or project showcasing AWS in your public portfolio.",
+          "isExplicitRequirement": true
+        },
+        {
+          "skill": "C",
+          "status": "partially_demonstrated",
+          "explanation": "Partially demonstrated via dependency/import in backend/src/config/db.js (L8-10).",
+          "evidence": [
+            {
+              "repository": "sanskarshinde268/verifind-plus",
+              "commitSha": "acdcf56c387ec092131a191a5c8fa8cd91c8ac86",
+              "filePath": "backend/src/config/db.js",
+              "startLine": 8,
+              "endLine": 10,
+              "evidenceSnippet": "\nconst mongoose = require(\"mongoose\");\n",
+              "explanation": "Referenced in import/module statement for C",
+              "isValidated": true
+            }
+          ],
+          "confidence": "medium",
+          "limitations": "Only configuration, imports, or basic structures found; full business logic was not identified.",
+          "recommendedNextStep": "Build a complete, standalone feature utilizing C with robust error handling and automated tests.",
+          "isExplicitRequirement": true
+        },
+        {
+          "skill": "C++",
+          "status": "partially_demonstrated",
+          "explanation": "Partially demonstrated via dependency/import in backend/src/config/db.js (L8-10).",
+          "evidence": [
+            {
+              "repository": "sanskarshinde268/verifind-plus",
+              "commitSha": "acdcf56c387ec092131a191a5c8fa8cd91c8ac86",
+              "filePath": "backend/src/config/db.js",
+              "startLine": 8,
+              "endLine": 10,
+              "evidenceSnippet": "\nconst mongoose = require(\"mongoose\");\n",
+              "explanation": "Referenced in import/module statement for C++",
+              "isValidated": true
+            }
+          ],
+          "confidence": "medium",
+          "limitations": "Only configuration, imports, or basic structures found; full business logic was not identified.",
+          "recommendedNextStep": "Build a complete, standalone feature utilizing C++ with robust error handling and automated tests.",
+          "isExplicitRequirement": true
+        },
+        {
+          "skill": "Docker",
+          "status": "not_demonstrated_in_scope",
+          "explanation": "No code-level implementation of Docker was found in inspected repository files.",
+          "evidence": [],
+          "confidence": "high",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "recommendedNextStep": "Implement a working module or project showcasing Docker in your public portfolio.",
+          "isExplicitRequirement": true
+        },
+        {
+          "skill": "Firebase",
+          "status": "not_demonstrated_in_scope",
+          "explanation": "No code-level implementation of Firebase was found in inspected repository files.",
+          "evidence": [],
+          "confidence": "high",
+          "limitations": "Inspected files contained no verifiable implementation. Skill may exist in uninspected repositories or private work.",
+          "recommendedNextStep": "Implement a working module or project showcasing Firebase in your public portfolio.",
+          "isExplicitRequirement": true
+        }
+      ],
+      "id": "asmt_1792196296400_x7gl",
+      "version": 1,
+      "createdAt": "2026-10-17T00:18:16.400Z"
     }
   ],
   "webhookDeliveries": {
