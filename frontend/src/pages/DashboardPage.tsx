@@ -7,7 +7,9 @@ import {
   TrendingUp,
   History,
   Terminal,
+  Compass,
 } from 'lucide-react';
+
 import { DiscoveredJob, StoredAssessment, PageView } from '../types';
 
 interface DashboardPageProps {
@@ -48,21 +50,29 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
         </div>
         <div className="flex items-center space-x-3">
           <button
+            onClick={() => onNavigate('roadmap')}
+            className="inline-flex items-center space-x-2 bg-indigo-600 hover:bg-indigo-700 text-white px-3.5 py-2 rounded-md text-sm font-medium transition-colors shadow-sm"
+          >
+            <Compass className="w-4 h-4 text-indigo-200" />
+            <span>Career Roadmap</span>
+          </button>
+          <button
             onClick={() => onNavigate('jobs')}
-            className="inline-flex items-center space-x-2 bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
+            className="inline-flex items-center space-x-2 bg-slate-900 hover:bg-slate-800 text-white px-3.5 py-2 rounded-md text-sm font-medium transition-colors"
           >
             <Briefcase className="w-4 h-4" />
             <span>Discover Real Jobs</span>
           </button>
           <button
             onClick={() => onNavigate('github_repos')}
-            className="inline-flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
+            className="inline-flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-2 rounded-md text-sm font-medium transition-colors"
           >
             <GitBranch className="w-4 h-4" />
             <span>Connect GitHub</span>
           </button>
         </div>
       </div>
+
 
       {/* Metrics Row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

@@ -9,6 +9,7 @@ import { StorageService, WebhookDeliveryRecord } from '../db/storage.js';
 import { GitHubService } from '../github/githubService.js';
 import { analyzeRepositoryCode, isDocumentationOrMetaFile } from '../analyzer/codeEvidenceEngine.js';
 import { calculateSkillGap } from '../skills/gapAnalyzer.js';
+import { analyzeAndPrioritizeSkillGaps } from '../roadmap/roadmapEngine.js';
 
 export interface WebhookVerificationResult {
   isValid: boolean;
@@ -280,7 +281,7 @@ export class WebhookProcessor {
         );
 
         // Save new version
-        this.storage.saveAssessment({
+        const newAsmt = this.storage.saveAssessment({
           jobId: targetJobId,
           repositoryId: repo.id,
           repositoryFullName: repo.full_name,
@@ -288,7 +289,31 @@ export class WebhookProcessor {
           matchScore: newMatchScore,
           assessedSkills: newAssessed,
         });
+
+        // Automatically update any active roadmap linked to this job & repository
+        const existingRoadmap = this.storage.getLatestRoadmap(undefined, targetJobId);
+        if (existingRoadmap && existingRoadmap.repositoryId === repo.id) {
+          const updatedGaps = analyzeAndPrioritizeSkillGaps(
+            jobRecord,
+            newAssessed,
+            existingRoadmap.preferences.targetRole
+          );
+
+          this.storage.saveRoadmap({
+            ...existingRoadmap,
+            id: `rdm_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`,
+            assessmentId: newAsmt.id,
+            commitSha: afterSha,
+            assessmentVersion: newAsmt.version,
+            skillGaps: updatedGaps,
+            version: existingRoadmap.version + 1,
+            previousVersionId: existingRoadmap.id,
+            reassessmentNote: `Automated webhook reassessment against commit ${afterSha.substring(0, 7)} (v${newAsmt.version}): skills and roadmap updated.`,
+            updatedAt: new Date().toISOString(),
+          });
+        }
       }
+
 
       this.storage.updateBackgroundJob(jobId, {
         status: 'completed',

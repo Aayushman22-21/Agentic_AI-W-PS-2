@@ -157,6 +157,17 @@ export function normalizeSkill(input: string): string | null {
 }
 
 /**
+ * Look up definition for a canonical or aliased skill name.
+ */
+export function getSkillInfo(input: string): SkillDefinition | undefined {
+  if (!input) return undefined;
+  const canonical = normalizeSkill(input) || input;
+  return SKILL_TAXONOMY.find(
+    (def) => def.canonical.toLowerCase() === canonical.toLowerCase()
+  );
+}
+
+/**
  * Extract canonical skills from raw text (job description, resume, repo topic/description).
  */
 export function extractSkillsFromText(text: string): {

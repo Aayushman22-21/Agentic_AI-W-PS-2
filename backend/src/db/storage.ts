@@ -9,6 +9,7 @@ import path from 'path';
 import { DiscoveredJob } from '../jobs/jobDiscoveryService.js';
 import { GitHubRepository, GitCommitInfo } from '../github/githubService.js';
 import { AssessedSkillResult, MatchScoreResult } from '../skills/gapAnalyzer.js';
+import { StoredRoadmap, ProjectProgressStatus } from '../roadmap/roadmapTypes.js';
 
 export interface StoredAssessment {
   id: string;
@@ -55,6 +56,7 @@ export interface StorageData {
   assessments: StoredAssessment[];
   webhookDeliveries: Record<string, WebhookDeliveryRecord>;
   backgroundJobs: Record<string, BackgroundJobRecord>;
+  roadmaps: Record<string, StoredRoadmap>;
 }
 
 export class StorageService {
@@ -70,6 +72,7 @@ export class StorageService {
       assessments: [],
       webhookDeliveries: {},
       backgroundJobs: {},
+      roadmaps: {},
     };
     this.init();
   }
@@ -84,6 +87,7 @@ export class StorageService {
       if (fs.existsSync(this.dataFilePath)) {
         const raw = fs.readFileSync(this.dataFilePath, 'utf-8');
         this.data = JSON.parse(raw);
+        this.data.roadmaps = this.data.roadmaps || {};
       } else {
         this.persist();
       }
@@ -91,6 +95,7 @@ export class StorageService {
       console.warn('Initializing in-memory storage fallback:', err);
     }
   }
+
 
   private persist() {
     try {
@@ -228,4 +233,89 @@ export class StorageService {
   listBackgroundJobs(): BackgroundJobRecord[] {
     return Object.values(this.data.backgroundJobs).sort((a, b) => b.createdAt.localeCompare(a.createdAt));
   }
+
+  // --- Career Roadmaps ---
+  saveRoadmap(roadmap: StoredRoadmap): StoredRoadmap {
+    this.data.roadmaps[roadmap.id] = roadmap;
+    this.persist();
+    return roadmap;
+  }
+
+  getRoadmap(id: string): StoredRoadmap | undefined {
+    return this.data.roadmaps[id];
+  }
+
+  getLatestRoadmap(assessmentId?: string, jobId?: string): StoredRoadmap | undefined {
+    const list = Object.values(this.data.roadmaps);
+    let filtered = list;
+
+    if (assessmentId) {
+      filtered = filtered.filter((r) => r.assessmentId === assessmentId);
+    } else if (jobId) {
+      filtered = filtered.filter((r) => r.jobId === jobId);
+    }
+
+    if (filtered.length === 0) return undefined;
+    return filtered.sort((a, b) => b.updatedAt.localeCompare(a.updatedAt))[0];
+  }
+
+  listRoadmaps(): StoredRoadmap[] {
+    return Object.values(this.data.roadmaps).sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
+  }
+
+  updateRoadmapProgress(
+    roadmapId: string,
+    projectId: string,
+    milestoneId: string | null,
+    isCompleted: boolean,
+    projectStatus?: ProjectProgressStatus
+  ): StoredRoadmap | undefined {
+    const roadmap = this.data.roadmaps[roadmapId];
+    if (!roadmap) return undefined;
+
+    const project = roadmap.recommendedProjects.find((p) => p.id === projectId);
+    if (!project) return undefined;
+
+    if (milestoneId) {
+      const milestone = project.milestones.find((m) => m.id === milestoneId);
+      if (milestone) {
+        milestone.isCompleted = isCompleted;
+        if (isCompleted) {
+          milestone.completedAt = new Date().toISOString();
+        } else {
+          delete milestone.completedAt;
+        }
+      }
+    }
+
+    if (projectStatus) {
+      project.status = projectStatus;
+    } else {
+      // Auto-update project status based on milestones
+      const allDone = project.milestones.every((m) => m.isCompleted);
+      const someDone = project.milestones.some((m) => m.isCompleted);
+      if (allDone && project.milestones.length > 0) {
+        project.status = 'completed_and_verified';
+      } else if (someDone) {
+        project.status = 'in_progress';
+      }
+    }
+
+    // Recalculate verified overall progress % strictly from completed milestones
+    let totalM = 0;
+    let completedM = 0;
+    for (const p of roadmap.recommendedProjects) {
+      for (const m of p.milestones) {
+        totalM += 1;
+        if (m.isCompleted) completedM += 1;
+      }
+    }
+
+    roadmap.overallProgressPct = totalM > 0 ? Math.round((completedM / totalM) * 100) : 0;
+    roadmap.updatedAt = new Date().toISOString();
+
+    this.persist();
+    return roadmap;
+  }
 }
+

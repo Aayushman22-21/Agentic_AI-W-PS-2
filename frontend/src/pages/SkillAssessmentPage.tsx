@@ -9,7 +9,9 @@ import {
   Info,
   ShieldCheck,
   ArrowRight,
+  Compass,
 } from 'lucide-react';
+
 import { StoredAssessment, PageView, AssessmentStatus } from '../types';
 
 interface SkillAssessmentPageProps {
@@ -65,14 +67,24 @@ export const SkillAssessmentPage: React.FC<SkillAssessmentPageProps> = ({
           <p className="text-xs text-slate-500 font-mono">Assessed on {new Date(assessment.createdAt).toLocaleString()}</p>
         </div>
 
-        <button
-          onClick={() => onNavigate('evidence')}
-          className="inline-flex items-center space-x-2 bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
-        >
-          <FileCode2 className="w-4 h-4 text-emerald-400" />
-          <span>Open Evidence Explorer</span>
-        </button>
+        <div className="flex items-center space-x-2">
+          <button
+            onClick={() => onNavigate('roadmap')}
+            className="inline-flex items-center space-x-2 bg-indigo-600 hover:bg-indigo-700 text-white px-3.5 py-2 rounded-md text-xs font-medium transition-colors shadow-sm"
+          >
+            <Compass className="w-4 h-4 text-indigo-200" />
+            <span>View Career Roadmap</span>
+          </button>
+          <button
+            onClick={() => onNavigate('evidence')}
+            className="inline-flex items-center space-x-2 bg-slate-900 hover:bg-slate-800 text-white px-3.5 py-2 rounded-md text-xs font-medium transition-colors shadow-sm"
+          >
+            <FileCode2 className="w-4 h-4 text-emerald-400" />
+            <span>Open Evidence Explorer</span>
+          </button>
+        </div>
       </div>
+
 
       {/* Match Score & Transparent Calculation Banner */}
       <div className="bg-white rounded-lg border border-slate-200 shadow-sm p-6 space-y-4">

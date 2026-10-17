@@ -50,15 +50,19 @@ Kurukshetra/
 │   │   │   ├── citationValidator.ts   # Programmatic 1-indexed line range & snippet verification
 │   │   │   └── codeEvidenceEngine.ts  # Code inspection engine with Zod schema & README filter
 │   │   ├── db/
-│   │   │   └── storage.ts             # Durable store with versioning (v1, v2...) & job queues
+│   │   │   └── storage.ts             # Durable store with versioning (v1, v2...), roadmaps & job queues
 │   │   ├── github/
 │   │   │   └── githubService.ts       # GitHub REST client (repos, commits, trees, diffs)
 │   │   ├── jobs/
 │   │   │   └── jobDiscoveryService.ts # Live Greenhouse & Lever board queries + JD parser
 │   │   ├── resume/
 │   │   │   └── resumeParser.ts        # PDF/text parser (claims strictly labeled unverified)
+│   │   ├── roadmap/
+│   │   │   ├── projectCatalogue.ts    # Curated practical engineering projects & official specs
+│   │   │   ├── roadmapEngine.ts       # Transparent gap prioritization & pedagogical project sequencing
+│   │   │   └── roadmapTypes.ts        # Domain models for roadmaps, skill gaps, projects, and milestones
 │   │   ├── routes/
-│   │   │   └── api.ts                 # REST API endpoints for all frontend views
+│   │   │   └── api.ts                 # REST API endpoints for all views, including /api/roadmap/*
 │   │   ├── skills/
 │   │   │   ├── gapAnalyzer.ts         # Weighted score calculation & hiring disclaimer
 │   │   │   └── taxonomy.ts            # Canonical skill taxonomy & alias normalization dictionary
@@ -66,10 +70,11 @@ Kurukshetra/
 │   │   │   └── webhookHandler.ts      # HMAC SHA-256 verifier, deduplicator & reassessment worker
 │   │   └── index.ts                   # Express server entry point with raw body preservation
 │   ├── scripts/
-│   │   └── demo_verification.ts       # Automated end-to-end simulation & verification script
+│   │   └── demo_verification.ts       # Automated 5-step end-to-end simulation script
 │   ├── tests/
 │   │   ├── citations_and_analysis.test.ts # Citation validation & README exclusion tests
 │   │   ├── github_and_resumes.test.ts     # Pagination, rate limiting & resume unverified tests
+│   │   ├── roadmap.test.ts                # Priority ranking, project sequencing, progress & persistence tests
 │   │   ├── skills.test.ts                 # Taxonomy normalization & weighted match score tests
 │   │   └── webhooks_and_history.test.ts   # HMAC SHA-256, deduplication & versioning tests
 │   ├── .env.example
@@ -78,22 +83,23 @@ Kurukshetra/
 ├── frontend/
 │   ├── src/
 │   │   ├── components/
-│   │   │   └── Navbar.tsx             # Developer navigation bar with contextual target pills
+│   │   │   └── Navbar.tsx             # Developer navigation bar with Compass Career Roadmap link
 │   │   ├── pages/
 │   │   │   ├── DashboardPage.tsx      # High-level metrics, active targets, recent evaluations
 │   │   │   ├── JobDiscoveryPage.tsx   # Live Greenhouse/Lever search + custom JD drawer
 │   │   │   ├── JobDetailsPage.tsx     # Explicit vs inferred technical requirements view
 │   │   │   ├── RepoSelectionPage.tsx  # GitHub username search, repo stats & assessment trigger
 │   │   │   ├── SkillAssessmentPage.tsx# Score breakdown, pills, disclaimer, bonus skills
+│   │   │   ├── CareerRoadmapPage.tsx  # 6-section personalized roadmap, gap rank, projects & tracker
 │   │   │   ├── EvidenceExplorerPage.tsx# Line-numbered code viewer & GitHub permalinks
 │   │   │   ├── AssessmentHistoryPage.tsx# Commit version timeline & side-by-side diff
 │   │   │   ├── EventStatusPage.tsx    # Webhook delivery audit table & polling fallback
 │   │   │   └── SettingsPage.tsx       # Tunneling, secrets, rate limits & resume claims tester
 │   │   ├── services/
-│   │   │   └── api.ts                 # Typed frontend API client
+│   │   │   └── api.ts                 # Typed frontend API client with roadmap methods
 │   │   ├── types/
 │   │   │   └── index.ts               # Shared TypeScript interfaces and domain models
-│   │   ├── App.tsx                    # Main state container & view router
+│   │   ├── App.tsx                    # Main state container & view router with /roadmap
 │   │   ├── index.css                  # Tailwind styles
 │   │   └── main.tsx                   # React 18 bootstrap
 │   ├── index.html
@@ -103,10 +109,12 @@ Kurukshetra/
 │   └── vite.config.ts
 ├── supabase/
 │   └── migrations/
-│       └── 001_initial_schema.sql     # Full Supabase PostgreSQL schema with 10 tables & indexes
+│       ├── 001_initial_schema.sql     # Full Supabase PostgreSQL schema with 10 tables & indexes
+│       └── 002_career_roadmap.sql     # Career Roadmaps, skill gaps, projects, and milestones schema
 ├── .env.example
 ├── package.json                       # Root workspace scripts
 └── README.md                          # Full architectural & demonstration documentation
+
 ```
 
 ---
@@ -132,11 +140,10 @@ SUPABASE_SERVICE_ROLE_KEY=          # Optional: Remote Supabase service role key
 ### Exact Terminal Commands
 
 ```powershell
-# 1. Run all 25 automated backend tests
+# 1. Run all 31 automated backend tests
 npm test
 
-
-# 2. Run the end-to-end demonstration verification script
+# 2. Run the end-to-end demonstration verification script (5 steps including Career Roadmap)
 npm run demo
 
 # 3. Build backend and frontend for production
@@ -175,43 +182,51 @@ npm run dev:frontend
    - Delivery deduplication via `X-GitHub-Delivery`.
    - Reassessment worker updates assessments to new version (v2, v3).
    - Detects README-only changes and creates an audit record **without falsely boosting skill scores**.
-7. **Complete 9-Page React Frontend**:
+7. **Personalised Career Roadmap & Project Recommender**:
+   - Transparent skill gap prioritization model (0-100 pts: Job Relevance [40] + Evidence Gap Severity [35] + Prerequisite Value [15] + Project Feasibility [10]).
+   - Explicit "not demonstrated in analysed scope" protection—never misinterpreting missing portfolio evidence as lack of student ability.
+   - Pedagogical project sequencing (Foundational ➔ Intermediate ➔ Advanced) with ordered milestones, concrete acceptance criteria, expected repository evidence, and real authoritative documentation links (MDN, PostgreSQL, FastAPI, Docker, React).
+   - Strictly milestone-verified completion progress meter (no invented proficiency percentages).
+   - Versioned roadmap persistence in `StorageService` and `supabase/migrations/002_career_roadmap.sql`.
+   - Automated roadmap update when webhook or polling detects newly demonstrated repository skills.
+8. **Complete 10-View React Frontend Dashboard**:
    - Restrained, professional developer UI with dark navbar, subtle borders, and monospace accents.
-   - All 9 pages connected to live backend APIs.
-8. **Automated Test Suite**:
-   - 25 Vitest tests across 4 test suites passing with 100% success rate.
-   - End-to-end demonstration script (`npm run demo`) verified.
-9. **Remote GitHub Synchronization**:
-   - Repository: `https://github.com/Aayushman22-21/ai-career-coach` on `main`.
-   - All full-stack source code, documentation, test suites, and database stores committed and pushed cleanly.
+   - Integrated `CareerRoadmapPage.tsx` with contextual pills, gap ranking breakdown, and interactive milestone checklist.
+   - All 10 views connected to live backend APIs.
+9. **Automated Test Suite**:
+   - 31 Vitest tests across 5 test suites passing with 100% success rate.
+   - End-to-end demonstration script (`npm run demo`) verifying complete 5-step lifecycle.
+10. **Remote GitHub Synchronization**:
+    - Repository: `https://github.com/Aayushman22-21/ai-career-coach` on `main`.
+    - All full-stack source code, documentation, test suites, and database stores committed and pushed cleanly.
 
 ---
 
 ## 4. Current Work in Progress & Active State
 
-- **Current State**: All core stages (Audit, Reusable Foundations, Assessment Engine, Webhooks & Polling, 9-Page Frontend, Automated Testing, E2E Demo Script, and Remote Push) are **100% complete, tested, and actively running**.
+- **Current State**: All stages (Audit, Foundations, Assessment Engine, Career Roadmap & Project Recommender, Webhooks & Polling, 10-View Frontend, 31 Automated Tests, and 5-Step E2E Demo) are **100% complete, tested, and actively running**.
 - **Active Processes & Local Services**:
-  - **Backend Server**: Running as daemon on `http://localhost:4000` (`npm run dev:backend`). Health check `/health` responds `200 OK`.
-  - **Frontend Dev Server**: Running as daemon on `http://localhost:5173` (`npm run dev:frontend`). Vite React UI responds `200 OK`.
-- **Last Command Executed**:
-  - `git push origin main` -> pushed commits `126007d` and `db18c76` to `https://github.com/Aayushman22-21/ai-career-coach`.
-  - Service verification checks (`http://localhost:4000/health` & `http://localhost:5173/`).
-- **Recent Major Features & Fixes**:
-  - **GitHub API Rate-Limit Diagnostics & Resilience**:
-    - Differentiated primary rate limit (`remaining: 0`), secondary limits (burst frequency / `Retry-After`), permission errors, and 401 bad credentials.
-    - Added in-memory TTL caching (10m for users & repos, 60m for trees & file blobs) and in-flight request deduplication.
-    - Added live quota status indicator (`/api/github/rate-limit-status`) and clear actionable error cards with retry buttons on frontend.
-    - Personal Access Token configuration supported via `GITHUB_TOKEN` in `backend/.env` (boosting limits from 60 to 5,000 req/hr).
-  - **Real Portfolio Evaluation & Store Persistence**:
-    - Tested and evaluated authentic repositories (e.g., `sanskarshinde268/verifind-plus` assessed against custom/manual Amazon Full Stack Engineer job requirements).
-    - Code evidence snippets, line citations, and match breakdown saved in `backend/data/career_coach_store.json`.
+  - **Backend Server**: Running on `http://localhost:4000` (`npm run dev:backend`). Health check `/health` responds `200 OK`.
+  - **Frontend Dev Server**: Running on `http://localhost:5173` (`npm run dev:frontend`). Vite React UI responds `200 OK`.
+- **Last Commands Executed**:
+  - `npm test` -> 31/31 Vitest tests passed cleanly across all 5 test files in 948ms.
+  - `npm run demo` -> All 5 verification steps passed (including Career Roadmap & Project Sequencing).
+  - `npm run build:frontend` & `npm run build:backend` -> Both compile with 0 errors.
 - **Working Files**:
-  - `backend/src/github/githubService.ts` (diagnostics, caching, in-flight deduplication).
-  - `backend/src/routes/api.ts` (structured GitHub API error handler & rate limit status endpoint).
-  - `frontend/src/pages/RepoSelectionPage.tsx` (quota bar, action cards, result preservation).
-  - `backend/data/career_coach_store.json` (persisted jobs, repos, commits, and assessments).
-  - `backend/tests/` (25 unit and integration tests passing).
-- **Working Tree**: Clean workspace; all code files are persisted and synchronized with `origin/main`.
+  - `backend/src/roadmap/roadmapTypes.ts` (domain interfaces for roadmaps, gaps, projects, milestones).
+  - `backend/src/roadmap/projectCatalogue.ts` (practical projects, milestones, acceptance criteria, verified docs).
+  - `backend/src/roadmap/roadmapEngine.ts` (transparent gap prioritization, progression sequencing, progress calculation).
+  - `backend/src/routes/api.ts` (`/api/roadmap/roles`, `/generate`, `/latest`, `/:id`, `/:id/progress`, `/:id/reassess`).
+  - `backend/src/db/storage.ts` (roadmap persistence, version tracking, milestone progress).
+  - `backend/src/webhooks/webhookHandler.ts` (auto-reassesses roadmaps on new repository code commits).
+  - `frontend/src/pages/CareerRoadmapPage.tsx` (6-section roadmap view with interactive checklist).
+  - `frontend/src/components/Navbar.tsx` (Compass navigation pill for Career Roadmap).
+  - `frontend/src/services/api.ts` (roadmap API methods).
+  - `frontend/src/types/index.ts` (frontend roadmap types).
+  - `supabase/migrations/002_career_roadmap.sql` (Postgres schema for roadmaps, gaps, projects, milestones).
+  - `backend/tests/roadmap.test.ts` (6 automated roadmap tests).
+- **Working Tree**: Clean workspace; all code files are persisted.
+
 
 ---
 

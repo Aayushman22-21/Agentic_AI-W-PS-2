@@ -5,6 +5,7 @@ import { JobDiscoveryPage } from './pages/JobDiscoveryPage';
 import { JobDetailsPage } from './pages/JobDetailsPage';
 import { RepoSelectionPage } from './pages/RepoSelectionPage';
 import { SkillAssessmentPage } from './pages/SkillAssessmentPage';
+import { CareerRoadmapPage } from './pages/CareerRoadmapPage';
 import { EvidenceExplorerPage } from './pages/EvidenceExplorerPage';
 import { AssessmentHistoryPage } from './pages/AssessmentHistoryPage';
 import { EventStatusPage } from './pages/EventStatusPage';
@@ -94,6 +95,15 @@ export function App() {
         {currentPage === 'assessment' && (
           <SkillAssessmentPage
             assessment={selectedAssessment}
+            onNavigate={setCurrentPage}
+            onSelectSkillForEvidence={(sk) => setEvidenceSkillFilter(sk)}
+          />
+        )}
+
+        {currentPage === 'roadmap' && (
+          <CareerRoadmapPage
+            activeAssessment={selectedAssessment}
+            activeJob={selectedJob}
             onNavigate={setCurrentPage}
             onSelectSkillForEvidence={(sk) => setEvidenceSkillFilter(sk)}
           />

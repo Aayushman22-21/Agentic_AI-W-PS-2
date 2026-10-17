@@ -135,13 +135,122 @@ export type PageView =
   | 'job_details'
   | 'github_repos'
   | 'assessment'
+  | 'roadmap'
   | 'evidence'
   | 'history'
   | 'event_status'
   | 'settings';
 
+export type SeniorityLevel = 'entry' | 'mid' | 'senior';
+
+export type ProjectDifficulty = 'foundational' | 'intermediate' | 'advanced';
+
+export type ProjectProgressStatus =
+  | 'not_started'
+  | 'in_progress'
+  | 'submitted_for_verification'
+  | 'completed_and_verified';
+
+export interface RoadmapPreferences {
+  targetRole: string;
+  targetCompany?: string;
+  seniority: SeniorityLevel;
+  weeklyHours?: number;
+}
+
+export interface RoadmapSkillGap {
+  skill: string;
+  category: string;
+  requiredProficiency: 'foundational' | 'competent' | 'advanced';
+  jobSource: string;
+  jobSourceUrl?: string;
+  supportingRequirementText: string;
+  evidenceStatus: AssessmentStatus;
+  evidenceCitations: CodeEvidenceCitation[];
+  confidence: 'high' | 'medium' | 'low';
+  assessmentReason: string;
+  limitations?: string;
+  isExplicitRequirement: boolean;
+  priorityRank: number;
+  priorityScore: number;
+  priorityBreakdown: {
+    jobRelevanceWeight: number;
+    evidenceGapSeverity: number;
+    prerequisiteValue: number;
+    feasibilityBonus: number;
+  };
+  priorityExplanation: string;
+  prerequisites: string[];
+}
+
+export interface ProjectMilestone {
+  id: string;
+  title: string;
+  description: string;
+  acceptanceCriteria: string[];
+  expectedEvidence: string;
+  isCompleted: boolean;
+  completedAt?: string;
+}
+
+export interface LearningResource {
+  title: string;
+  url: string;
+  type: 'docs' | 'tutorial' | 'spec';
+  description: string;
+}
+
+export interface RecommendedProject {
+  id: string;
+  title: string;
+  track: string;
+  difficulty: ProjectDifficulty;
+  sequenceOrder: number;
+  description: string;
+  estimatedEffort: string;
+  prerequisites: string[];
+  skillsCovered: string[];
+  targetSkillGaps: string[];
+  roleFitExplanation: string;
+  milestones: ProjectMilestone[];
+  learningResources: LearningResource[];
+  status: ProjectProgressStatus;
+  submittedEvidenceUrl?: string;
+  verifiedAt?: string;
+}
+
+export interface StoredRoadmap {
+  id: string;
+  assessmentId: string;
+  jobId: string;
+  jobTitle: string;
+  jobCompany: string;
+  jobSourceUrl?: string;
+  repositoryId: number;
+  repositoryFullName: string;
+  commitSha: string;
+  assessmentVersion: number;
+  preferences: RoadmapPreferences;
+  skillGaps: RoadmapSkillGap[];
+  recommendedProjects: RecommendedProject[];
+  overallProgressPct: number;
+  reassessmentNote?: string;
+  previousVersionId?: string;
+  version: number;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface AvailableCareerRole {
+  role: string;
+  category: string;
+  description: string;
+  coreSkills: string[];
+}
+
 export type GitHubErrorType =
   | 'rate_limit_exceeded'
+
   | 'secondary_rate_limit'
   | 'permission_denied'
   | 'not_found'

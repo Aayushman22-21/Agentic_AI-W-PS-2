@@ -8,7 +8,10 @@ import {
   GitHubRateLimitInfo,
   GitHubApiErrorDetail,
   GitHubErrorType,
+  StoredRoadmap,
+  AvailableCareerRole,
 } from '../types';
+
 
 export class GitHubClientError extends Error {
   public readonly errorType: GitHubErrorType;
@@ -191,4 +194,83 @@ export const api = {
       return res.json();
     }
   },
+
+  // Career Roadmap & Project Recommendations
+  async getRoadmapRoles(): Promise<{ canonicalRoles: AvailableCareerRole[]; discoveredRoles: AvailableCareerRole[] }> {
+    const res = await fetch(`${API_BASE}/roadmap/roles`);
+    if (!res.ok) throw new Error('Failed to fetch career roles');
+    return res.json();
+  },
+
+  async generateRoadmap(data: {
+    assessmentId?: string;
+    jobId?: string;
+    targetRole?: string;
+    targetCompany?: string;
+    seniority?: string;
+    weeklyHours?: number;
+  }): Promise<StoredRoadmap> {
+    const res = await fetch(`${API_BASE}/roadmap/generate`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error || 'Failed to generate career roadmap');
+    }
+    return res.json();
+  },
+
+  async getLatestRoadmap(assessmentId?: string, jobId?: string): Promise<StoredRoadmap> {
+    const params = new URLSearchParams();
+    if (assessmentId) params.append('assessmentId', assessmentId);
+    if (jobId) params.append('jobId', jobId);
+    const query = params.toString() ? `?${params.toString()}` : '';
+    const res = await fetch(`${API_BASE}/roadmap/latest${query}`);
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error || 'No active roadmap found');
+    }
+    return res.json();
+  },
+
+  async getRoadmapById(id: string): Promise<StoredRoadmap> {
+    const res = await fetch(`${API_BASE}/roadmap/${encodeURIComponent(id)}`);
+    if (!res.ok) throw new Error('Failed to fetch roadmap');
+    return res.json();
+  },
+
+  async updateRoadmapProgress(
+    roadmapId: string,
+    data: {
+      projectId: string;
+      milestoneId?: string;
+      isCompleted?: boolean;
+      projectStatus?: string;
+    }
+  ): Promise<StoredRoadmap> {
+    const res = await fetch(`${API_BASE}/roadmap/${encodeURIComponent(roadmapId)}/progress`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error || 'Failed to update roadmap progress');
+    }
+    return res.json();
+  },
+
+  async reassessRoadmap(roadmapId: string): Promise<StoredRoadmap> {
+    const res = await fetch(`${API_BASE}/roadmap/${encodeURIComponent(roadmapId)}/reassess`, {
+      method: 'POST',
+    });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error || 'Failed to reassess roadmap');
+    }
+    return res.json();
+  },
 };
+

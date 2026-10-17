@@ -38,3 +38,8 @@ reference-repo/
 *.zip
 *.tar.gz
 
+# Test temporary data files
+backend/data/test_*.json
+data/test_*.json
+
+

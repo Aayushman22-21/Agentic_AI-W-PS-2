@@ -9,6 +9,7 @@ import {
   Activity,
   Settings,
   ShieldCheck,
+  Compass,
 } from 'lucide-react';
 import { PageView } from '../types';
 
@@ -30,11 +31,13 @@ export const Navbar: React.FC<NavbarProps> = ({
     { id: 'jobs', label: 'Job Discovery', icon: Briefcase },
     { id: 'github_repos', label: 'Repositories', icon: GitBranch },
     { id: 'assessment', label: 'Skill Assessment', icon: CheckCircle2 },
+    { id: 'roadmap', label: 'Career Roadmap', icon: Compass },
     { id: 'evidence', label: 'Evidence Explorer', icon: FileCode2 },
     { id: 'history', label: 'History & Diff', icon: History },
     { id: 'event_status', label: 'Event Processing', icon: Activity },
     { id: 'settings', label: 'Settings', icon: Settings },
   ];
+
 
   return (
     <header className="bg-slate-900 border-b border-slate-800 text-slate-200 sticky top-0 z-50">

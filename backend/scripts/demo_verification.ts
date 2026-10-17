@@ -16,6 +16,12 @@ import { JobDiscoveryService } from '../src/jobs/jobDiscoveryService.js';
 import { analyzeRepositoryCode } from '../src/analyzer/codeEvidenceEngine.js';
 import { calculateSkillGap } from '../src/skills/gapAnalyzer.js';
 import { WebhookProcessor } from '../src/webhooks/webhookHandler.js';
+import {
+  analyzeAndPrioritizeSkillGaps,
+  recommendProjectsForRoadmap,
+  calculateRoadmapProgress,
+} from '../src/roadmap/roadmapEngine.js';
+import { StoredRoadmap } from '../src/roadmap/roadmapTypes.js';
 
 async function runDemo() {
   console.log('===============================================================');
@@ -252,10 +258,72 @@ export async function getUserById(id: string) {
   console.log(`   Audit Explanation: "${latestV3.matchScore.scoreExplanation}"`);
   console.log();
 
+  // STEP 5: Career Roadmap & Project Recommendation Generation
+  console.log('📌 STEP 5: Generating Career Roadmap & Sequenced Practical Projects...');
+  const targetRole = 'Senior Backend Engineer';
+  const gaps = analyzeAndPrioritizeSkillGaps(job, latestV3.assessedSkills, targetRole);
+
+  console.log(`✅ Ranked Priority Skill Gaps for ${targetRole}:`);
+  gaps.slice(0, 3).forEach((g) => {
+    console.log(`   #${g.priorityRank} ${g.skill} (Score: ${g.priorityScore}/100)`);
+    console.log(`      Formula: ${g.priorityExplanation}`);
+    console.log(`      Evidence Status: ${g.evidenceStatus}`);
+  });
+
+  const recommendedProjects = recommendProjectsForRoadmap(targetRole, gaps, 'senior');
+  console.log(`\n✅ Recommended Practical Projects (${recommendedProjects.length} Sequenced):`);
+  recommendedProjects.forEach((p) => {
+    console.log(`   Step ${p.sequenceOrder} [${p.difficulty.toUpperCase()}]: "${p.title}"`);
+    console.log(`      Targeted Gaps: [${p.targetSkillGaps.join(', ')}]`);
+    console.log(`      Effort: ${p.estimatedEffort}`);
+    console.log(`      Milestones (${p.milestones.length}): ${p.milestones.map((m) => m.title).join(' ➔ ')}`);
+  });
+
+  // Verify milestone checkmark & strictly calculated progress percentage
+  const initialProgress = calculateRoadmapProgress(recommendedProjects);
+  console.log(`\n✅ Initial Verified Milestone Progress: ${initialProgress}%`);
+
+  // Complete first milestone of foundational project
+  recommendedProjects[0].milestones[0].isCompleted = true;
+  recommendedProjects[0].milestones[0].completedAt = new Date().toISOString();
+  recommendedProjects[0].status = 'in_progress';
+
+  const updatedProgress = calculateRoadmapProgress(recommendedProjects);
+  console.log(`✅ Progress After Completing Milestone 1: ${updatedProgress}% (strictly milestone-verified)`);
+
+  // Persist roadmap
+  const storedRoadmap: StoredRoadmap = {
+    id: `rdm_demo_${Date.now()}`,
+    assessmentId: latestV3.id,
+    jobId: job.id,
+    jobTitle: job.title,
+    jobCompany: job.company,
+    repositoryId: repoId,
+    repositoryFullName: repoFullName,
+    commitSha: latestV3.commitSha,
+    assessmentVersion: latestV3.version,
+    preferences: {
+      targetRole,
+      targetCompany: job.company,
+      seniority: 'senior',
+      weeklyHours: 15,
+    },
+    skillGaps: gaps,
+    recommendedProjects,
+    overallProgressPct: updatedProgress,
+    version: 1,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  };
+  storage.saveRoadmap(storedRoadmap);
+  console.log(`✅ Stored Roadmap in Durable JSON Database: id = "${storedRoadmap.id}" (v${storedRoadmap.version})`);
+  console.log();
+
   console.log('===============================================================');
   console.log('🎉 ALL END-TO-END DEMONSTRATION CAPABILITIES VERIFIED SUCCESSFULLY!');
   console.log('===============================================================');
 }
+
 
 runDemo().catch((err) => {
   console.error('Demonstration failed:', err);

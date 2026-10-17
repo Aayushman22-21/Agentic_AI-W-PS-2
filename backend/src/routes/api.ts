@@ -12,6 +12,13 @@ import { WebhookProcessor } from '../webhooks/webhookHandler.js';
 import { analyzeRepositoryCode, isDocumentationOrMetaFile } from '../analyzer/codeEvidenceEngine.js';
 import { calculateSkillGap } from '../skills/gapAnalyzer.js';
 import { SKILL_TAXONOMY, extractSkillsFromText } from '../skills/taxonomy.js';
+import {
+  CANONICAL_CAREER_ROLES,
+  analyzeAndPrioritizeSkillGaps,
+  recommendProjectsForRoadmap,
+  calculateRoadmapProgress,
+} from '../roadmap/roadmapEngine.js';
+import { StoredRoadmap } from '../roadmap/roadmapTypes.js';
 
 const upload = multer({ limits: { fileSize: 10 * 1024 * 1024 } }); // 10MB limit
 
@@ -325,5 +332,234 @@ export function createApiRouter(
     }
   });
 
+  // ==========================================
+  // Career Roadmap & Project Recommendation API
+  // ==========================================
+
+  // 1. Available Target Career Roles
+  router.get('/roadmap/roles', (_req: Request, res: Response) => {
+    // Combine canonical roles with unique job titles discovered in system
+    const existingJobs = storage.listJobs();
+    const dynamicJobRoles = Array.from(new Set(existingJobs.map((j) => j.title)))
+      .filter((title) => !CANONICAL_CAREER_ROLES.some((r) => r.role.toLowerCase() === title.toLowerCase()))
+      .map((title) => ({
+        role: title,
+        category: 'backend' as const,
+        description: `Role dynamically discovered from job postings (${title}).`,
+        coreSkills: [],
+      }));
+
+    res.json({
+      canonicalRoles: CANONICAL_CAREER_ROLES,
+      discoveredRoles: dynamicJobRoles,
+    });
+  });
+
+  // 2. Generate or Update a Career Roadmap from an Assessment
+  router.post('/roadmap/generate', (req: Request, res: Response) => {
+    try {
+      const {
+        assessmentId,
+        jobId,
+        targetRole,
+        targetCompany,
+        seniority = 'mid',
+        weeklyHours = 10,
+      } = req.body;
+
+      // 1. Retrieve Assessment
+      let assessment = assessmentId
+        ? storage.getAllAssessments().find((a) => a.id === assessmentId)
+        : undefined;
+
+      // Fallback: If no assessmentId provided, get latest assessment
+      if (!assessment) {
+        const allAssessments = storage.getAllAssessments();
+        if (jobId) {
+          assessment = allAssessments.find((a) => a.jobId === jobId);
+        } else if (allAssessments.length > 0) {
+          assessment = allAssessments[0];
+        }
+      }
+
+      if (!assessment) {
+        return res.status(400).json({
+          error: 'No repository assessment found. Please run a skill assessment on your GitHub repository first so recommendations are grounded in authentic evidence.',
+        });
+      }
+
+      // 2. Retrieve Job
+      const effectiveJobId = jobId || assessment.jobId;
+      const job = storage.getJob(effectiveJobId);
+      if (!job) {
+        return res.status(404).json({ error: `Associated job ${effectiveJobId} not found.` });
+      }
+
+      const effectiveRole = targetRole || job.title;
+
+      // 3. Analyze & Prioritize Skill Gaps
+      const skillGaps = analyzeAndPrioritizeSkillGaps(job, assessment.assessedSkills, effectiveRole);
+
+      // 4. Recommend Sequenced Projects
+      const recommendedProjects = recommendProjectsForRoadmap(effectiveRole, skillGaps, seniority);
+
+      // 5. Calculate initial milestone progress
+      const overallProgressPct = calculateRoadmapProgress(recommendedProjects);
+
+      // 6. Check for previous roadmap version
+      const existingRoadmap = storage.getLatestRoadmap(assessment.id, job.id);
+      const nextVersion = existingRoadmap ? existingRoadmap.version + 1 : 1;
+
+      const roadmap: StoredRoadmap = {
+        id: `rdm_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`,
+        assessmentId: assessment.id,
+        jobId: job.id,
+        jobTitle: job.title,
+        jobCompany: targetCompany || job.company,
+        jobSourceUrl: job.url || undefined,
+        repositoryId: assessment.repositoryId,
+        repositoryFullName: assessment.repositoryFullName,
+        commitSha: assessment.commitSha,
+        assessmentVersion: assessment.version,
+        preferences: {
+          targetRole: effectiveRole,
+          targetCompany: targetCompany || job.company,
+          seniority,
+          weeklyHours: Number(weeklyHours) || 10,
+        },
+        skillGaps,
+        recommendedProjects,
+        overallProgressPct,
+        version: nextVersion,
+        previousVersionId: existingRoadmap?.id,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      };
+
+      const saved = storage.saveRoadmap(roadmap);
+      res.status(201).json(saved);
+    } catch (err: any) {
+      console.error('Failed to generate roadmap:', err);
+      res.status(500).json({ error: err.message || 'Error generating career roadmap.' });
+    }
+  });
+
+  // 3. Get Latest Active Roadmap
+  router.get('/roadmap/latest', (req: Request, res: Response) => {
+    const assessmentId = req.query.assessmentId as string | undefined;
+    const jobId = req.query.jobId as string | undefined;
+
+    const roadmap = storage.getLatestRoadmap(assessmentId, jobId);
+    if (!roadmap) {
+      return res.status(404).json({ error: 'No roadmap found. Please generate one first.' });
+    }
+    res.json(roadmap);
+  });
+
+  // 4. Get Roadmap by ID
+  router.get('/roadmap/:id', (req: Request, res: Response) => {
+    const roadmap = storage.getRoadmap(req.params.id);
+    if (!roadmap) {
+      return res.status(404).json({ error: 'Roadmap not found.' });
+    }
+    res.json(roadmap);
+  });
+
+  // 5. Update Project Progress & Milestone Completion
+  router.patch('/roadmap/:id/progress', (req: Request, res: Response) => {
+    const { projectId, milestoneId, isCompleted, projectStatus } = req.body;
+    if (!projectId) {
+      return res.status(400).json({ error: 'projectId is required.' });
+    }
+
+    const updated = storage.updateRoadmapProgress(
+      req.params.id,
+      projectId,
+      milestoneId || null,
+      Boolean(isCompleted),
+      projectStatus
+    );
+
+    if (!updated) {
+      return res.status(404).json({ error: 'Roadmap or project not found.' });
+    }
+
+    res.json(updated);
+  });
+
+  // 6. Reassess Roadmap against Latest Repository Evidence
+  router.post('/roadmap/:id/reassess', (req: Request, res: Response) => {
+    try {
+      const existing = storage.getRoadmap(req.params.id);
+      if (!existing) {
+        return res.status(404).json({ error: 'Roadmap not found.' });
+      }
+
+      // Fetch the latest assessment for this job and repository
+      const latestAssessment = storage.getLatestAssessment(existing.jobId, existing.repositoryId);
+      if (!latestAssessment) {
+        return res.status(400).json({ error: 'No updated assessment found for this repository.' });
+      }
+
+      const job = storage.getJob(existing.jobId);
+      if (!job) {
+        return res.status(404).json({ error: 'Job not found.' });
+      }
+
+      // Re-analyze skill gaps with new assessment
+      const updatedGaps = analyzeAndPrioritizeSkillGaps(
+        job,
+        latestAssessment.assessedSkills,
+        existing.preferences.targetRole
+      );
+
+      // Track newly demonstrated skills
+      const newlyDemonstrated: string[] = [];
+      for (const gap of updatedGaps) {
+        const oldGap = existing.skillGaps.find((g) => g.skill.toLowerCase() === gap.skill.toLowerCase());
+        if (oldGap && oldGap.evidenceStatus !== 'demonstrated' && gap.evidenceStatus === 'demonstrated') {
+          newlyDemonstrated.push(gap.skill);
+        }
+      }
+
+      const reassessmentNote = newlyDemonstrated.length > 0
+        ? `Reassessment against commit ${latestAssessment.commitSha.substring(0, 7)} (v${latestAssessment.version}): newly verified code evidence found for ${newlyDemonstrated.join(', ')}.`
+        : `Reassessment against commit ${latestAssessment.commitSha.substring(0, 7)} (v${latestAssessment.version}): skill evidence base verified; no new skills demonstrated.`;
+
+      // Update project list: preserve user progress on existing projects, update targeted gaps
+      const updatedProjects = existing.recommendedProjects.map((proj) => {
+        const remainingGaps = proj.targetSkillGaps.filter((s) => {
+          const gap = updatedGaps.find((g) => g.skill.toLowerCase() === s.toLowerCase());
+          return gap ? gap.evidenceStatus !== 'demonstrated' : true;
+        });
+
+        return {
+          ...proj,
+          targetSkillGaps: remainingGaps,
+        };
+      });
+
+      const updatedRoadmap: StoredRoadmap = {
+        ...existing,
+        id: `rdm_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`,
+        assessmentId: latestAssessment.id,
+        commitSha: latestAssessment.commitSha,
+        assessmentVersion: latestAssessment.version,
+        skillGaps: updatedGaps,
+        recommendedProjects: updatedProjects,
+        reassessmentNote,
+        previousVersionId: existing.id,
+        version: existing.version + 1,
+        updatedAt: new Date().toISOString(),
+      };
+
+      const saved = storage.saveRoadmap(updatedRoadmap);
+      res.json(saved);
+    } catch (err: any) {
+      res.status(500).json({ error: err.message || 'Error reassessing roadmap.' });
+    }
+  });
+
   return router;
+
 }
