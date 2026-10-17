@@ -33,3 +33,8 @@ coverage/
 
 # Cloned reference repo (credited in README)
 reference-repo/
+
+# Archives and temporary bundles
+*.zip
+*.tar.gz
+
