@@ -136,9 +136,8 @@ export function App() {
 
       {/* Footer */}
       <footer className="bg-white border-t border-slate-200 py-6 mt-12 text-xs text-slate-500 font-mono text-center">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-center gap-2">
           <span>AI Career Coach • Verifiable Code Evidence Assessment System</span>
-          <span>Portions of skill vocabularies adapted from JaweriaAsif745/Resume-github-job-analyzer (MIT License)</span>
         </div>
       </footer>
     </div>
